@@ -96,12 +96,12 @@ with try_it:
 with results:
     st.subheader('So, does it work?')
     if m:
-        st.write(f"On {m['dev_rows']} practice-check examples kept out of training, it matched the current labels about **{m['model']['accuracy']:.0%} of the time**.")
+        st.write(f"On {m['dev_rows']} check examples from our collected responses, kept out of training, it matched the current labels about **{m['model']['accuracy']:.0%} of the time**.")
         st.warning('These are early results. A fluent reviewer still needs to check the answers and labels. We have not run the final test.')
         st.write(f"We used {m['train_rows']} examples to train it. The {m['dev_rows']} examples above help us find problems and choose improvements. Another 70 examples are set aside for later.")
         st.subheader('What we’re checking next')
         st.write('Some responses describe a situation rather than ask for anything. We need to remove unclear answers, check the labels, and make sure similar wording isn’t being used to both teach and test the model.')
-        with st.expander('For our AI class: the technical details'):
+        with st.expander('How we measured it'):
             st.write('We use the organiser’s baseline: character TF-IDF and logistic regression. It learns useful patterns of letters from training examples, then uses them to choose one of ten request types.')
             st.write(f"Development accuracy: {m['model']['accuracy']:.4f}. Macro-F1: {m['model']['macro_f1']:.4f}. Majority baseline macro-F1: {m['majority_baseline']['macro_f1']:.4f}.")
             st.write('Accuracy is the share of correct guesses. Macro-F1 averages a score for each category, so common categories do not dominate. The majority baseline always guesses the most common training category.')
@@ -115,11 +115,10 @@ with about:
     st.subheader('Where the words came from')
     st.write('We shared everyday situations in a form and asked people to write what they would naturally say to an assistant. We received 44 submissions and 386 written answers. We did not collect audio.')
     st.write('We kept the original wording and logged small spacing changes. Eight repeated or clearly unusable entries were left out of the first run. A fluent reviewer will help us decide what belongs in the final dataset.')
-    st.subheader('Why the photo?')
-    st.write('We wanted the page to feel connected to Nairobi and the people who make the city what it is. This is a photograph of an artisan in Kibera, not a photograph of our respondents. We did not record where respondents live.')
-    st.caption('Photo: Brian Otieno / Bryan Jaybee, “Bone jewelers of Kibera 01”, 5 May 2017. Displayed without edits. The people pictured are not presented as endorsing this project.')
-    st.markdown('[Photo source](https://commons.wikimedia.org/wiki/File:Bone_jewelers_of_Kibera_01.jpg) · [CC BY-SA 4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/)')
+    st.subheader('References')
+    st.markdown('- [Photograph: Bone jewelers of Kibera 01](https://commons.wikimedia.org/wiki/File:Bone_jewelers_of_Kibera_01.jpg) — Brian Otieno / Bryan Jaybee, 2017. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Displayed without edits.\n- Strathmore NLP Datathon Starter Kit v2 — the starting code and ten request categories.\n- [MASSIVE dataset](https://github.com/alexa/massive) — background for the organiser’s label scheme; no MASSIVE examples were used to train this version.')
+    st.caption('Training data in this version: Team 20’s collected form responses only.')
     st.subheader('Who built it')
-    st.write('Team 20, Strathmore NLP Datathon 2026. Built using the organiser’s Starter Kit v2. Codex helped with the code and page design; no generated responses were added to the dataset.')
+    st.write('Team 20 — Kathy Auma, Irene Gitau, Hafswa Sufi.')
     st.caption('The raw responses and review records are not included in this demo. Permission for public dataset release is still being clarified.')
 st.markdown('<div class="bottom">Rada · Team 20 · A work in progress, with real mistakes to learn from.</div>',unsafe_allow_html=True)

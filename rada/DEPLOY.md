@@ -3,7 +3,7 @@
 This branch adds Rada without replacing the existing starter demo or training scripts.
 The app entry point is `team20_app.py` at the repository root.
 
-In Streamlit Community Cloud, choose this repository and branch `codex/rada-demo`,
+In Streamlit Community Cloud, choose this repository and branch `training-data`,
 set the main file to `team20_app.py`, and choose Python 3.12 in advanced settings.
 Use a private app and explicitly invite team viewers.
 
@@ -25,3 +25,4 @@ Training/review instructions: `TEAM20_RADA.md` and `REVIEW_GUIDE.md`.
 The existing repository already tracks a virtual environment and bytecode. This branch leaves those
 existing files untouched; they are not dependencies for cloud deployment. The new ignore rules prevent
 additional local environments/private files from being added.
+

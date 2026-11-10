@@ -3,6 +3,11 @@
 Track A intent classification for the Strathmore NLP Hub Datathon 2026.
 Language: Kiswahili/Sheng code-switching, as stated by the team.
 
+Team 20: Kathy Auma, Irene Gitau, Hafswa Sufi.
+Working branch: `training-data`.
+Current handbook compliance review: [PROJECT_AUDIT.md](PROJECT_AUDIT.md).
+Cloud app entry point: `team20_app.py`; deployment steps: [rada/DEPLOY.md](rada/DEPLOY.md).
+
 ## Current result
 
 The first run uses the organiser's character TF-IDF (2–5 grams) and logistic regression baseline.
@@ -19,6 +24,9 @@ No spelling standardization, translation, synthetic augmentation or label-driven
 ## Run locally
 
 Use Python 3.10+ (tested here with Python 3.12). In PowerShell from this folder:
+
+`requirements-lock.txt` records the exact installed environment for the preliminary run;
+the smaller requirements.txt is the app's deployment dependency file.
 
 ```
 python -m venv .venv
