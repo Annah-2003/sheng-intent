@@ -34,7 +34,7 @@ data/: empty templates and English practice sets (100 intent,100 semantic,120 se
 validate.py: basic structural, review, source-method, duplicate and split-group checks; also checks semantic spans.
 train.py: CPU character-TF-IDF/logistic-regression baseline and majority comparator. Semantic adds a training-only surface-slot dictionary.
 evaluate.py: console scores, per_label_report.csv, test_predictions.csv and test_metrics.json. No audio or network dataset download.
-app.py: Streamlit labels, uncalibrated model probability, semantic JSON when applicable. Mobile app is an equivalent optional interface.
+app.py: Streamlit demo for the three trained tracks. It reports the predicted label and top model probabilities, marks practice models, and never performs external actions. It loads the selected track's artifacts/<track>/model.joblib from train.py; teammate models must provide the same package fields (model, track, practice and language; semantic also needs slot_memory). Mobile app is an equivalent optional interface.
 templates/: blank planning, annotation, data-card, quality and contribution outlines.
 examples/: completed fictional teaching documents. Never copy their permission/evaluation claims into a real submission.
 
@@ -42,4 +42,3 @@ examples/: completed fictional teaching documents. Never copy their permission/e
 Intent describes requested action; sentiment describes opinion; limited semantic parsing adds slots. Sentiment is not emotion detection; semantic baseline is not a general text-to-SQL system. The slot baseline cannot extract unknown surface values reliably. Report failures on an explicit unseen-value test subset.
 Reuse and credit this starter code. Document other datasets, models, AI tools and changes. Keep private data/permission evidence out of public GitHub. Do not open untrusted joblib files.
 Use your own GitHub repo now. A final NLP Hub repository and submission process will be announced. Deadline:11 November 2026,11:59 p.m. EAT. Do not guess a submission URL.
-
