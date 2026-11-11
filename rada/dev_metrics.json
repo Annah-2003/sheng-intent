@@ -1,0 +1,442 @@
+{
+  "status": "PRELIMINARY_UNREVIEWED",
+  "split_policy": "B1+B2 train; B3 dev; B4+B5 reserved",
+  "train_rows": 241,
+  "dev_rows": 67,
+  "test_evaluated": false,
+  "model": {
+    "accuracy": 0.7313432835820896,
+    "macro_f1": 0.6954439351498175,
+    "report": {
+      "weather_query": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1-score": 0.8888888888888888,
+        "support": 8.0
+      },
+      "datetime_query": {
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.8333333333333334,
+        "support": 7.0
+      },
+      "alarm_set": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1-score": 0.8888888888888888,
+        "support": 8.0
+      },
+      "calendar_set": {
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.8333333333333334,
+        "support": 7.0
+      },
+      "calendar_query": {
+        "precision": 1.0,
+        "recall": 0.14285714285714285,
+        "f1-score": 0.25,
+        "support": 7.0
+      },
+      "lists_createoradd": {
+        "precision": 0.4,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.36363636363636365,
+        "support": 6.0
+      },
+      "lists_query": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 6.0
+      },
+      "play_music": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1-score": 0.8571428571428571,
+        "support": 6.0
+      },
+      "news_query": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8333333333333334,
+        "support": 6.0
+      },
+      "qa_definition": {
+        "precision": 0.5454545454545454,
+        "recall": 1.0,
+        "f1-score": 0.7058823529411765,
+        "support": 6.0
+      },
+      "accuracy": 0.7313432835820896,
+      "macro avg": {
+        "precision": 0.7628787878787879,
+        "recall": 0.7238095238095238,
+        "f1-score": 0.6954439351498175,
+        "support": 67.0
+      },
+      "weighted avg": {
+        "precision": 0.7757123473541384,
+        "recall": 0.7313432835820896,
+        "f1-score": 0.7044605721076309,
+        "support": 67.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    ],
+    "label_order": [
+      "weather_query",
+      "datetime_query",
+      "alarm_set",
+      "calendar_set",
+      "calendar_query",
+      "lists_createoradd",
+      "lists_query",
+      "play_music",
+      "news_query",
+      "qa_definition"
+    ]
+  },
+  "majority_baseline": {
+    "accuracy": 0.11940298507462686,
+    "macro_f1": 0.021333333333333336,
+    "report": {
+      "weather_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "datetime_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7.0
+      },
+      "alarm_set": {
+        "precision": 0.11940298507462686,
+        "recall": 1.0,
+        "f1-score": 0.21333333333333335,
+        "support": 8.0
+      },
+      "calendar_set": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7.0
+      },
+      "calendar_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7.0
+      },
+      "lists_createoradd": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "lists_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "play_music": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "news_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "qa_definition": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "accuracy": 0.11940298507462686,
+      "macro avg": {
+        "precision": 0.011940298507462687,
+        "recall": 0.1,
+        "f1-score": 0.021333333333333336,
+        "support": 67.0
+      },
+      "weighted avg": {
+        "precision": 0.014257072844731565,
+        "recall": 0.11940298507462686,
+        "f1-score": 0.0254726368159204,
+        "support": 67.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "label_order": [
+      "weather_query",
+      "datetime_query",
+      "alarm_set",
+      "calendar_set",
+      "calendar_query",
+      "lists_createoradd",
+      "lists_query",
+      "play_music",
+      "news_query",
+      "qa_definition"
+    ]
+  },
+  "python": "3.12.14",
+  "sklearn": "1.7.2",
+  "input_sha256": "0634ef6d6fd55c43ff783d4909a8ef21a6dc697a5376546aeafb2752b9874cb7",
+  "limitations": [
+    "Provisional scenario labels can be wrong.",
+    "Same respondent may have submitted more than once; identities were not collected.",
+    "Near-duplicate semantic groups still need human review.",
+    "Reserved batches may not meet final class minimums after review."
+  ]
+}
