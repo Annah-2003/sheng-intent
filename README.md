@@ -1,44 +1,67 @@
-# Strathmore NLP Hub Datathon starter kit v2.0
-Choose one supported track: intent, sentiment, or limited semantic parsing. See TRACKS.md, NEXT_STEPS.md, NATURAL_DATA.md and examples/. Python 3.10 or later is recommended.
+# Rada — Team 20
 
-## Install (from this folder)
-python -m venv .venv
-# macOS/Linux:
-source .venv/bin/activate
-# Windows PowerShell instead:
-.venv\Scripts\Activate.ps1
+Kathy Auma · Irene Gitau · Hafswa Sufi
+
+Strathmore NLP Hub Datathon 2026, Track A. Rada recognises ten kinds of written Kiswahili/Sheng assistant requests. It predicts an intent and shows a simulated response; it does not perform real actions.
+
+## Results
+
+324 accepted contributions: **213 training, 55 development, 56 final test**. Every intent meets the required 15/5/5 minimums. Private assessment permission is recorded; public dataset release is unconfirmed.
+
+The selected model uses 213 team examples plus 500 MASSIVE Kiswahili training examples. Selected on development macro-F1, then evaluated once on the frozen test: **43/56 correct (76.8% accuracy), macro-F1 0.764**. Majority comparator accuracy: 8.9%. The measured MASSIVE improvement is on development only, not a baseline-only final-test comparison.
+
+See [results](docs/RESULTS.md), [data and annotation](docs/DATA.md), [team and AI assistance](docs/TEAM.md) and [critical review](docs/JUDGE_REVIEW.md).
+
+## Run the website
+
+Python 3.12 is recommended. From the repository root:
+
+```
 python -m pip install -r requirements.txt
-
-Use only the activation command for your OS.
-## Practice first
-python validate.py --track intent --data data/practice_intent.csv --practice
-python train.py --track intent --data data/practice_intent.csv --practice
-python evaluate.py --track intent --data data/practice_intent.csv --practice
 python -m streamlit run app.py
+```
 
-For sentiment, substitute --track sentiment and data/practice_sentiment.csv; for semantic parsing use --track semantic and data/practice_semantic.csv. Train each desired track before selecting it in the app. Artifacts live in artifacts/<track>/ so tasks do not overwrite each other.
+Streamlit Community Cloud settings: select the branch containing this version, use **app.py** as the main file, and select Python 3.12 in Advanced settings. requirements.txt is at the repository root. The website needs no API keys, raw dataset or retraining.
 
-## Your contribution
-Copy data/template.csv (or semantic_template.csv) to data/contribution.csv. Use label for the class; legacy intent headers are accepted for backwards compatibility. Follow track-specific minimums. Run the same commands with --data data/contribution.csv and WITHOUT --practice. Do not count teaching fixtures as contributions.
-Each training run stores a dataset fingerprint. Evaluation rejects changed data or a mismatched track/mode; regenerate the model deliberately if you correct your dataset before freezing.
-Choose settings with development data. Freeze then evaluate test once. Accuracy and macro-F1 are printed with per-label F1 bars and saved as JSON/CSV. Semantic adds slot F1 and full-frame exact match.
-No minimum F1 is guaranteed. Practice examples are constructed, small and easier than realistic data; their scores are teaching results, not a production benchmark.
+The app loads models/selection.json and verifies its model hash against the saved development and final results. It uses the same frozen model as the reported test.
 
-## Workflow
-![From reviewed data to a working demonstration](workflow.png)
+## Project layout
 
-## Files
-taxonomy.csv: 10 action labels, English boundaries and Kiswahili illustrations (local fluent review still needed).
-sentiment_guidelines.md: opinion labels and exclusions.
-data/: empty templates and English practice sets (100 intent,100 semantic,120 sentiment).
-validate.py: basic structural, review, source-method, duplicate and split-group checks; also checks semantic spans.
-train.py: CPU character-TF-IDF/logistic-regression baseline and majority comparator. Semantic adds a training-only surface-slot dictionary.
-evaluate.py: console scores, per_label_report.csv, test_predictions.csv and test_metrics.json. No audio or network dataset download.
-app.py: Streamlit demo for the three trained tracks. It reports the predicted label and top model probabilities, marks practice models, and never performs external actions. It loads the selected track's artifacts/<track>/model.joblib from train.py; teammate models must provide the same package fields (model, track, practice and language; semantic also needs slot_memory). Mobile app is an equivalent optional interface.
-templates/: blank planning, annotation, data-card, quality and contribution outlines.
-examples/: completed fictional teaching documents. Never copy their permission/evaluation claims into a real submission.
+| Folder | Purpose |
+| --- | --- |
+| src/ | Preparation, fixed training comparisons, guarded final evaluation and report generation; organiser helpers under starter/ |
+| notebooks/ | One notebook for inspecting the frozen run or reconstructing a separate experiment |
+| data/ | Private assessment data; excluded from public Git |
+| models/ | Three fitted classifiers, selected-model metadata and frozen model/data hashes |
+| reports/ | Public aggregate metrics, counts, validation and selected external source IDs |
+| docs/ | Annotation, sources, results, contribution disclosure and submission checklist |
+| assets/ | Licensed photograph and attribution |
+| tests/ | Public app/artifact checks and private assessment checks |
 
-## Scope and disclosure
-Intent describes requested action; sentiment describes opinion; limited semantic parsing adds slots. Sentiment is not emotion detection; semantic baseline is not a general text-to-SQL system. The slot baseline cannot extract unknown surface values reliably. Report failures on an explicit unseen-value test subset.
-Reuse and credit this starter code. Document other datasets, models, AI tools and changes. Keep private data/permission evidence out of public GitHub. Do not open untrusted joblib files.
-Use your own GitHub repo now. A final NLP Hub repository and submission process will be announced. Deadline:11 November 2026,11:59 p.m. EAT. Do not guess a submission URL.
+Raw responses, reviewer records, external pool and per-example predictions remain local/private. Give judges the required cleared assessment files through the permitted restricted route. The public code repository alone is not the complete assessment package.
+
+## Checks and reproduction
+
+Public deployment checks:
+
+```
+python -m unittest discover -s tests -p test_public_app.py
+```
+
+The private checks additionally require the assessment data and predictions:
+
+```
+python -m unittest discover -s tests -p test_project.py
+```
+
+Dependencies are in requirements.txt; requirements-lock.txt records the original environment. Model settings: character TF-IDF 2–5 grams, logistic regression max_iter=1000, seed 42. See reports/development.json for all three conditions.
+
+models/freeze.json prevents preparation, training or evaluation from overwriting the completed experiment. To reproduce training, use a separate copy with the permitted private inputs and no pre-existing model/final-result artifacts; run python -m src.prepare, python -m src.train, then python -m src.evaluate once. Keep the submitted frozen version intact and do not tune using its observed test outcomes. The notebook does not automatically score a test.
+
+## Submission status
+
+The repository is prepared for Streamlit deployment. Deployment, recording, final member sign-off, submission tag/ZIP/manifest and official hand-in confirmation remain separate tasks. See docs/SUBMISSION.md. A GitHub push is not the official submission.
+
+## Credit
+
+Baseline and unchanged helpers: Strathmore NLP Datathon Starter Kit v2, MIT notice in src/starter/LICENSE_CODE.txt. MASSIVE: CC BY 4.0; photograph: CC BY-SA 4.0 with credit in assets/PHOTO_CREDIT.md. AI assistance is disclosed in docs/TEAM.md. No AI-written utterances were counted as human contributions.

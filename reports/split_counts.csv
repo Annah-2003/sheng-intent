@@ -1,0 +1,11 @@
+label,train,dev,test
+weather_query,23,6,6
+datetime_query,18,5,6
+alarm_set,23,7,5
+calendar_set,22,6,5
+calendar_query,22,6,6
+lists_createoradd,22,5,5
+lists_query,19,5,5
+play_music,21,5,6
+news_query,23,5,5
+qa_definition,20,5,7

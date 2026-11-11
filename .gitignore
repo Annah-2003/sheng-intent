@@ -1,7 +1,12 @@
 .venv/
 venv/
 __pycache__/
+*.py[cod]
+data/
 private/
 review/
-artifacts/
 .streamlit/secrets.toml
+.env
+.env.*
+reports/*predictions.csv
+reports/*.png

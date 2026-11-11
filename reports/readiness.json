@@ -1,0 +1,35 @@
+{
+  "accepted": 324,
+  "split_totals": {
+    "train": 213,
+    "dev": 55,
+    "test": 56
+  },
+  "shortfalls": [],
+  "permission_for_assessment_confirmed": true,
+  "public_release_confirmed": false,
+  "official_validator_passed": true,
+  "ready_for_final_test": true,
+  "reviewed_sha256": "6c78f6b0881ce0fe497a75148982bc50a945e7596639af84b43c41b3ace8c697",
+  "decisions_sha256": "60e916719f05f73305250fa13439db5d478ee6f1d25ac2382df3d1876ae4156b",
+  "evidence_sha256": {
+    "raw": "bd5bc0c3474d937b865b8961f7889301862fb5016105f0963e91181317f25b32",
+    "review_workbook": "d5d7b89ee76cade9cbdd8a42210f314b8e27d9505bab99ad8dada0ce1e8ff513",
+    "candidates": "ad9f2d79730e0910b7745b8c406096fcd46a497952811339493f3296af11ee20",
+    "decisions": "60e916719f05f73305250fa13439db5d478ee6f1d25ac2382df3d1876ae4156b",
+    "metadata": "c967799a3cd5a9282495369df24dbab3ce38936b3a74f27a796055b5913ec110",
+    "permission": "85e9d6db49f1d2fc5d7993bc389c221d98328d498bd9437570f7fd261ae7bc71"
+  },
+  "holds": {
+    "accepted": 321,
+    "rejected": 34,
+    "held_edited": 24,
+    "accepted_after_user_review": 2,
+    "held_pending": 2,
+    "held_mechanical": 2,
+    "held_punctuation_duplicate": 1,
+    "accepted_human_followup": 1
+  },
+  "status": "reviewed_subset_development_only",
+  "test_evaluated": false
+}
