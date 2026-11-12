@@ -1,0 +1,166 @@
+﻿record_id,text,label,condition,prediction
+T20-R002-B3Q01,Leo ile njeve itakuwa,weather_query,baseline,weather_query
+T20-R002-B3Q02,Leo ni date?,datetime_query,baseline,datetime_query
+T20-R002-B3Q03,Si uniamshe 5:30,alarm_set,baseline,alarm_set
+T20-R002-B3Q04,Next week napresent,calendar_set,baseline,calendar_set
+T20-R002-B3Q05,Kuna fom ya sato?,calendar_query,baseline,alarm_set
+T20-R003-B3Q01,Kutakuwa na njeve leo?,weather_query,baseline,weather_query
+T20-R003-B3Q02,Leo ni siku gani,datetime_query,baseline,datetime_query
+T20-R003-B3Q03,Eka alarm ya 5:30 sato,alarm_set,baseline,alarm_set
+T20-R003-B3Q04,Eka kwa calendar tunapresent next week,calendar_set,baseline,calendar_set
+T20-R003-B3Q05,Kuna kitu iko sato ?,calendar_query,baseline,news_query
+T20-R003-B3Q06,Nilisahu kueka vitu kwa list,lists_createoradd,baseline,lists_query
+T20-R003-B3Q07,Nilieka nini kwa list yangu ?,lists_query,baseline,lists_query
+T20-R003-B3Q08,Mix doba ya toxic,play_music,baseline,play_music
+T20-R003-B3Q09,Nini inaendelea kenya leo,news_query,baseline,news_query
+T20-R003-B3Q10,Ebu search hiyo jina google sijangam,qa_definition,baseline,qa_definition
+T20-R004-B3Q02,Leo ni?,datetime_query,baseline,datetime_query
+T20-R004-B3Q04,Tunafaa kupresent acha nieke reminder,calendar_set,baseline,calendar_set
+T20-R004-B3Q05,Sato niko wapi?,calendar_query,baseline,lists_query
+T20-R004-B3Q06,"Nahitaji mkate, maziwa na nyama",lists_createoradd,baseline,lists_createoradd
+T20-R004-B3Q07,I guess nimepack kila kitu but acha niconfirm,lists_query,baseline,lists_createoradd
+T20-R004-B3Q08,Acha niskize Bien kiasi,play_music,baseline,play_music
+T20-R004-B3Q09,Acha nijue rada leo,news_query,baseline,news_query
+T20-R004-B3Q10,"Eh, awa wanasema nini",qa_definition,baseline,qa_definition
+T20-R005-B3Q01,Leo itakuwa joto ama baridi?,weather_query,baseline,weather_query
+T20-R005-B3Q02,Leo ni lini?,datetime_query,baseline,datetime_query
+T20-R005-B3Q03,"Nadai kuamka 5.30 on Saturday, set alarm.",alarm_set,baseline,alarm_set
+T20-R012-B3Q03,unaeza niekea alarm ya 5.30 am Saturday,alarm_set,baseline,alarm_set
+T20-R014-B3Q01,Like kutakua na joto ama nje be,weather_query,baseline,weather_query
+T20-R014-B3Q03,Niekee alarm ya 5:30 ngware Sato,alarm_set,baseline,alarm_set
+T20-R014-B3Q04,Naeka presentation Kwa calendar. Iko next week,calendar_set,baseline,calendar_set
+T20-R014-B3Q05,Ukona plans Sato?,calendar_query,baseline,news_query
+T20-R014-B3Q06,"Ongeza chipo, chocolates na kuku",lists_createoradd,baseline,lists_createoradd
+T20-R014-B3Q07,Wacha niangalie Kama nimeacha kitu,lists_query,baseline,weather_query
+T20-R014-B3Q08,Weka waffles,play_music,baseline,play_music
+T20-R014-B3Q09,Kunaendaje Kwani,news_query,baseline,news_query
+T20-R014-B3Q10,Inamaanisha?,qa_definition,baseline,qa_definition
+T20-R038-B3Q01,Leo kutakuwa na njeve ama jua,weather_query,baseline,weather_query
+T20-R038-B3Q03,Nisetie alarm ya 5 30,alarm_set,baseline,alarm_set
+T20-R038-B3Q04,Add presentation next week kwa calendar,calendar_set,baseline,calendar_set
+T20-R038-B3Q05,Kuna form Sato,calendar_query,baseline,alarm_set
+T20-R038-B3Q06,Add hizi vitu utat kwa list,lists_createoradd,baseline,lists_createoradd
+T20-R038-B3Q07,Packing list iko na?,lists_query,baseline,lists_createoradd
+T20-R038-B3Q08,Cheza nani,play_music,baseline,play_music
+T20-R038-B3Q09,Leo kuna?,news_query,baseline,weather_query
+T20-R038-B3Q10,Hii inamaanisha?,qa_definition,baseline,qa_definition
+T20-R039-B3Q01,Cheki iparo itakuwa joto au zii?,weather_query,baseline,weather_query
+T20-R039-B3Q02,What's the date?,datetime_query,baseline,news_query
+T20-R039-B3Q03,I think nitaweka alarm ya Sato ya 5:30,alarm_set,baseline,alarm_set
+T20-R039-B3Q04,Niko na presentation next week. Wacha nieke kwa calendar.,calendar_set,baseline,calendar_set
+T20-R039-B3Q05,Niko na plans Sato ama zii?,calendar_query,baseline,weather_query
+T20-R039-B3Q07,Wacha nicheck kaa nimepack vitu zote,lists_query,baseline,lists_createoradd
+T20-R039-B3Q08,Si unipee simu nieeke huyu Tems we listen to her music.,play_music,baseline,play_music
+T20-R039-B3Q09,What's going on leo like kwa the country? Nimeskia ati kuna things zinahappen,news_query,baseline,news_query
+T20-R039-B3Q10,"Cheki, obscurity huwa inamean nini",qa_definition,baseline,qa_definition
+T20-FOLLOWUP-001,tebu ongezea hapo,lists_createoradd,baseline,lists_createoradd
+T20-R002-B3Q01,Leo ile njeve itakuwa,weather_query,massive_20,weather_query
+T20-R002-B3Q02,Leo ni date?,datetime_query,massive_20,datetime_query
+T20-R002-B3Q03,Si uniamshe 5:30,alarm_set,massive_20,alarm_set
+T20-R002-B3Q04,Next week napresent,calendar_set,massive_20,calendar_set
+T20-R002-B3Q05,Kuna fom ya sato?,calendar_query,massive_20,alarm_set
+T20-R003-B3Q01,Kutakuwa na njeve leo?,weather_query,massive_20,calendar_query
+T20-R003-B3Q02,Leo ni siku gani,datetime_query,massive_20,datetime_query
+T20-R003-B3Q03,Eka alarm ya 5:30 sato,alarm_set,massive_20,alarm_set
+T20-R003-B3Q04,Eka kwa calendar tunapresent next week,calendar_set,massive_20,calendar_set
+T20-R003-B3Q05,Kuna kitu iko sato ?,calendar_query,massive_20,calendar_query
+T20-R003-B3Q06,Nilisahu kueka vitu kwa list,lists_createoradd,massive_20,lists_query
+T20-R003-B3Q07,Nilieka nini kwa list yangu ?,lists_query,massive_20,lists_query
+T20-R003-B3Q08,Mix doba ya toxic,play_music,massive_20,play_music
+T20-R003-B3Q09,Nini inaendelea kenya leo,news_query,massive_20,news_query
+T20-R003-B3Q10,Ebu search hiyo jina google sijangam,qa_definition,massive_20,qa_definition
+T20-R004-B3Q02,Leo ni?,datetime_query,massive_20,datetime_query
+T20-R004-B3Q04,Tunafaa kupresent acha nieke reminder,calendar_set,massive_20,calendar_set
+T20-R004-B3Q05,Sato niko wapi?,calendar_query,massive_20,calendar_query
+T20-R004-B3Q06,"Nahitaji mkate, maziwa na nyama",lists_createoradd,massive_20,lists_createoradd
+T20-R004-B3Q07,I guess nimepack kila kitu but acha niconfirm,lists_query,massive_20,play_music
+T20-R004-B3Q08,Acha niskize Bien kiasi,play_music,massive_20,play_music
+T20-R004-B3Q09,Acha nijue rada leo,news_query,massive_20,news_query
+T20-R004-B3Q10,"Eh, awa wanasema nini",qa_definition,massive_20,qa_definition
+T20-R005-B3Q01,Leo itakuwa joto ama baridi?,weather_query,massive_20,weather_query
+T20-R005-B3Q02,Leo ni lini?,datetime_query,massive_20,datetime_query
+T20-R005-B3Q03,"Nadai kuamka 5.30 on Saturday, set alarm.",alarm_set,massive_20,alarm_set
+T20-R012-B3Q03,unaeza niekea alarm ya 5.30 am Saturday,alarm_set,massive_20,alarm_set
+T20-R014-B3Q01,Like kutakua na joto ama nje be,weather_query,massive_20,weather_query
+T20-R014-B3Q03,Niekee alarm ya 5:30 ngware Sato,alarm_set,massive_20,alarm_set
+T20-R014-B3Q04,Naeka presentation Kwa calendar. Iko next week,calendar_set,massive_20,calendar_set
+T20-R014-B3Q05,Ukona plans Sato?,calendar_query,massive_20,calendar_query
+T20-R014-B3Q06,"Ongeza chipo, chocolates na kuku",lists_createoradd,massive_20,calendar_set
+T20-R014-B3Q07,Wacha niangalie Kama nimeacha kitu,lists_query,massive_20,lists_query
+T20-R014-B3Q08,Weka waffles,play_music,massive_20,play_music
+T20-R014-B3Q09,Kunaendaje Kwani,news_query,massive_20,calendar_set
+T20-R014-B3Q10,Inamaanisha?,qa_definition,massive_20,qa_definition
+T20-R038-B3Q01,Leo kutakuwa na njeve ama jua,weather_query,massive_20,weather_query
+T20-R038-B3Q03,Nisetie alarm ya 5 30,alarm_set,massive_20,alarm_set
+T20-R038-B3Q04,Add presentation next week kwa calendar,calendar_set,massive_20,calendar_set
+T20-R038-B3Q05,Kuna form Sato,calendar_query,massive_20,alarm_set
+T20-R038-B3Q06,Add hizi vitu utat kwa list,lists_createoradd,massive_20,lists_query
+T20-R038-B3Q07,Packing list iko na?,lists_query,massive_20,lists_createoradd
+T20-R038-B3Q08,Cheza nani,play_music,massive_20,play_music
+T20-R038-B3Q09,Leo kuna?,news_query,massive_20,weather_query
+T20-R038-B3Q10,Hii inamaanisha?,qa_definition,massive_20,qa_definition
+T20-R039-B3Q01,Cheki iparo itakuwa joto au zii?,weather_query,massive_20,weather_query
+T20-R039-B3Q02,What's the date?,datetime_query,massive_20,news_query
+T20-R039-B3Q03,I think nitaweka alarm ya Sato ya 5:30,alarm_set,massive_20,alarm_set
+T20-R039-B3Q04,Niko na presentation next week. Wacha nieke kwa calendar.,calendar_set,massive_20,calendar_set
+T20-R039-B3Q05,Niko na plans Sato ama zii?,calendar_query,massive_20,calendar_query
+T20-R039-B3Q07,Wacha nicheck kaa nimepack vitu zote,lists_query,massive_20,play_music
+T20-R039-B3Q08,Si unipee simu nieeke huyu Tems we listen to her music.,play_music,massive_20,play_music
+T20-R039-B3Q09,What's going on leo like kwa the country? Nimeskia ati kuna things zinahappen,news_query,massive_20,news_query
+T20-R039-B3Q10,"Cheki, obscurity huwa inamean nini",qa_definition,massive_20,qa_definition
+T20-FOLLOWUP-001,tebu ongezea hapo,lists_createoradd,massive_20,lists_createoradd
+T20-R002-B3Q01,Leo ile njeve itakuwa,weather_query,massive_50,weather_query
+T20-R002-B3Q02,Leo ni date?,datetime_query,massive_50,datetime_query
+T20-R002-B3Q03,Si uniamshe 5:30,alarm_set,massive_50,alarm_set
+T20-R002-B3Q04,Next week napresent,calendar_set,massive_50,calendar_set
+T20-R002-B3Q05,Kuna fom ya sato?,calendar_query,massive_50,calendar_query
+T20-R003-B3Q01,Kutakuwa na njeve leo?,weather_query,massive_50,weather_query
+T20-R003-B3Q02,Leo ni siku gani,datetime_query,massive_50,datetime_query
+T20-R003-B3Q03,Eka alarm ya 5:30 sato,alarm_set,massive_50,alarm_set
+T20-R003-B3Q04,Eka kwa calendar tunapresent next week,calendar_set,massive_50,calendar_set
+T20-R003-B3Q05,Kuna kitu iko sato ?,calendar_query,massive_50,calendar_query
+T20-R003-B3Q06,Nilisahu kueka vitu kwa list,lists_createoradd,massive_50,lists_query
+T20-R003-B3Q07,Nilieka nini kwa list yangu ?,lists_query,massive_50,lists_query
+T20-R003-B3Q08,Mix doba ya toxic,play_music,massive_50,play_music
+T20-R003-B3Q09,Nini inaendelea kenya leo,news_query,massive_50,news_query
+T20-R003-B3Q10,Ebu search hiyo jina google sijangam,qa_definition,massive_50,qa_definition
+T20-R004-B3Q02,Leo ni?,datetime_query,massive_50,datetime_query
+T20-R004-B3Q04,Tunafaa kupresent acha nieke reminder,calendar_set,massive_50,play_music
+T20-R004-B3Q05,Sato niko wapi?,calendar_query,massive_50,lists_query
+T20-R004-B3Q06,"Nahitaji mkate, maziwa na nyama",lists_createoradd,massive_50,lists_createoradd
+T20-R004-B3Q07,I guess nimepack kila kitu but acha niconfirm,lists_query,massive_50,lists_query
+T20-R004-B3Q08,Acha niskize Bien kiasi,play_music,massive_50,play_music
+T20-R004-B3Q09,Acha nijue rada leo,news_query,massive_50,news_query
+T20-R004-B3Q10,"Eh, awa wanasema nini",qa_definition,massive_50,qa_definition
+T20-R005-B3Q01,Leo itakuwa joto ama baridi?,weather_query,massive_50,weather_query
+T20-R005-B3Q02,Leo ni lini?,datetime_query,massive_50,calendar_query
+T20-R005-B3Q03,"Nadai kuamka 5.30 on Saturday, set alarm.",alarm_set,massive_50,alarm_set
+T20-R012-B3Q03,unaeza niekea alarm ya 5.30 am Saturday,alarm_set,massive_50,alarm_set
+T20-R014-B3Q01,Like kutakua na joto ama nje be,weather_query,massive_50,weather_query
+T20-R014-B3Q03,Niekee alarm ya 5:30 ngware Sato,alarm_set,massive_50,alarm_set
+T20-R014-B3Q04,Naeka presentation Kwa calendar. Iko next week,calendar_set,massive_50,calendar_set
+T20-R014-B3Q05,Ukona plans Sato?,calendar_query,massive_50,calendar_query
+T20-R014-B3Q06,"Ongeza chipo, chocolates na kuku",lists_createoradd,massive_50,calendar_set
+T20-R014-B3Q07,Wacha niangalie Kama nimeacha kitu,lists_query,massive_50,lists_query
+T20-R014-B3Q08,Weka waffles,play_music,massive_50,play_music
+T20-R014-B3Q09,Kunaendaje Kwani,news_query,massive_50,news_query
+T20-R014-B3Q10,Inamaanisha?,qa_definition,massive_50,qa_definition
+T20-R038-B3Q01,Leo kutakuwa na njeve ama jua,weather_query,massive_50,weather_query
+T20-R038-B3Q03,Nisetie alarm ya 5 30,alarm_set,massive_50,alarm_set
+T20-R038-B3Q04,Add presentation next week kwa calendar,calendar_set,massive_50,calendar_set
+T20-R038-B3Q05,Kuna form Sato,calendar_query,massive_50,weather_query
+T20-R038-B3Q06,Add hizi vitu utat kwa list,lists_createoradd,massive_50,lists_query
+T20-R038-B3Q07,Packing list iko na?,lists_query,massive_50,lists_query
+T20-R038-B3Q08,Cheza nani,play_music,massive_50,play_music
+T20-R038-B3Q09,Leo kuna?,news_query,massive_50,weather_query
+T20-R038-B3Q10,Hii inamaanisha?,qa_definition,massive_50,qa_definition
+T20-R039-B3Q01,Cheki iparo itakuwa joto au zii?,weather_query,massive_50,weather_query
+T20-R039-B3Q02,What's the date?,datetime_query,massive_50,news_query
+T20-R039-B3Q03,I think nitaweka alarm ya Sato ya 5:30,alarm_set,massive_50,alarm_set
+T20-R039-B3Q04,Niko na presentation next week. Wacha nieke kwa calendar.,calendar_set,massive_50,calendar_set
+T20-R039-B3Q05,Niko na plans Sato ama zii?,calendar_query,massive_50,weather_query
+T20-R039-B3Q07,Wacha nicheck kaa nimepack vitu zote,lists_query,massive_50,play_music
+T20-R039-B3Q08,Si unipee simu nieeke huyu Tems we listen to her music.,play_music,massive_50,play_music
+T20-R039-B3Q09,What's going on leo like kwa the country? Nimeskia ati kuna things zinahappen,news_query,massive_50,news_query
+T20-R039-B3Q10,"Cheki, obscurity huwa inamean nini",qa_definition,massive_50,qa_definition
+T20-FOLLOWUP-001,tebu ongezea hapo,lists_createoradd,massive_50,lists_createoradd

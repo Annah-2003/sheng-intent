@@ -1,0 +1,39 @@
+{
+  "language": "sw-KE",
+  "language_confirmed": true,
+  "source_dataset": "Team20_scenario_survey",
+  "source_version": "bd5bc0c3474d937b865b8961f7889301862fb5016105f0963e91181317f25b32",
+  "source_url": "not_applicable",
+  "licence_or_permission": "documented_academic_participation_consent_and_user_confirmed_private_judge_sharing",
+  "permission_confirmed_for_assessment": true,
+  "permission_evidence_path": "",
+  "public_release_cleared": false,
+  "candidates_sha256": "ad9f2d79730e0910b7745b8c406096fcd46a497952811339493f3296af11ee20",
+  "reviewers": {
+    "T20-KATHY": {
+      "competence_confirmed": true,
+      "independence_checked": true,
+      "authored_contributor_codes": [],
+      "evidence": "User identified Kathy as fluent reviewer and confirmed she submitted no responses; workbook decisions imported without model-based relabelling."
+    },
+    "T20-HAFSWA": {
+      "competence_confirmed": true,
+      "independence_checked": true,
+      "authored_contributor_codes": [],
+      "evidence": "Hafswa judged these original Kiswahili/Sheng expressions in chat and explicitly confirmed she wrote neither answer."
+    }
+  },
+  "record_sources": {
+    "T20-FOLLOWUP-001": {
+      "source_dataset": "Team20_human_followup",
+      "source_version": "2026-11-11_chat",
+      "source_method": "original_human",
+      "licence_or_permission": "friend_confirmed_private_academic_assessment_use",
+      "permission_confirmed_for_assessment": true,
+      "author_code": "T20-FRIEND-001",
+      "reviewer_code": "T20-HAFSWA",
+      "evidence": "User supplied friend-authored exact phrase and explicitly confirmed friend agreed to academic dataset sharing privately with judges."
+    }
+  },
+  "mechanical_duplicate_policy": "Mechanical hold: punctuation-only duplicate of T20-R005-B3Q02 in dev. Preserve original text and workbook acceptance; exclude redundant training occurrence."
+}

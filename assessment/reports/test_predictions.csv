@@ -1,0 +1,57 @@
+﻿record_id,text,label,prediction
+T20-R008-B5Q01,Walai kutanyesha,weather_query,weather_query
+T20-R008-B5Q02,Class ni ya saa ngapi,datetime_query,datetime_query
+T20-R008-B5Q03,I need to set hiyo alarm ya daily,alarm_set,alarm_set
+T20-R008-B5Q04,Wacha ni save hiyo meeting ya 4,calendar_set,calendar_query
+T20-R008-B5Q05,Aki siko sure kama meeting ni ya kesho,calendar_query,calendar_query
+T20-R008-B5Q06,Wacha niongeze hii pia,lists_createoradd,lists_createoradd
+T20-R008-B5Q07,Ebu nisome hiyo list yangu tena,lists_query,lists_query
+T20-R008-B5Q08,Sijui nisikilize nini,play_music,play_music
+T20-R008-B5Q09,Nini ya maana imefanyika leo,news_query,qa_definition
+T20-R008-B5Q10,Ebu explain hii na usitumie majina kubwa kubwa,qa_definition,calendar_set
+T20-R010-B5Q01,Kutaendelea kunyesha hivi?,weather_query,news_query
+T20-R010-B5Q02,Ni saa ngapi nione ka ntamake.,datetime_query,datetime_query
+T20-R010-B5Q03,Weka alarm ya kila siku asubuhi.,alarm_set,alarm_set
+T20-R010-B5Q04,Weka meeting ya 4 jioni.,calendar_set,calendar_query
+T20-R010-B5Q05,Nikona meeting kesho?,calendar_query,calendar_query
+T20-R010-B5Q06,Nikumbushe nichukue ile stuff kesho jioni.,lists_createoradd,calendar_set
+T20-R010-B5Q07,Ebu niambie kenye iko kwa ile list ya...,lists_query,lists_query
+T20-R010-B5Q08,Nafeel bango bie. Ebu niekee music ya kudance.,play_music,play_music
+T20-R010-B5Q10,Ebu nielezee...,qa_definition,qa_definition
+T20-R018-B4Q01,Cheki mi naishia zangu inadai kunyesha,weather_query,lists_query
+T20-R018-B4Q02,Masaa?,datetime_query,datetime_query
+T20-R018-B4Q03,Nishow ikifika 20,alarm_set,qa_definition
+T20-R018-B4Q05,Nadoo nini kesho?,calendar_query,calendar_query
+T20-R018-B4Q07,Bash ikona nini,lists_query,calendar_query
+T20-R018-B4Q08,Eka doba,play_music,play_music
+T20-R018-B4Q10,Sa hii inamaanisha,qa_definition,qa_definition
+T20-R024-B4Q01,Weather ya Naivasha iko aje saa hii?,weather_query,weather_query
+T20-R024-B4Q02,Ni saa ngapi,datetime_query,datetime_query
+T20-R024-B4Q04,Nikumbushe nisome kesho jioni bana,calendar_set,calendar_set
+T20-R024-B4Q05,Callendar yangu inasema kesho rada,calendar_query,calendar_query
+T20-R024-B4Q06,Nadai shopping list ya bash,lists_createoradd,lists_query
+T20-R024-B4Q07,Kuna nini kwa list yangu ya bash,lists_query,lists_query
+T20-R024-B4Q08,Niekee doba,play_music,play_music
+T20-R024-B4Q09,Rada ya news,news_query,news_query
+T20-R024-B4Q10,Hiyo ndio gani mzee,qa_definition,qa_definition
+T20-R026-B4Q01,How's the weather looking like kesho?,weather_query,weather_query
+T20-R026-B4Q02,Ni saa ngapi right now?,datetime_query,datetime_query
+T20-R026-B4Q03,Niekee an alarm for 20 minutes.,alarm_set,alarm_set
+T20-R026-B4Q09,Check citizen TV. Nini inafanyika saa hii?,news_query,news_query
+T20-R026-B4Q10,What does bomboclatt mean?,qa_definition,qa_definition
+T20-R033-B5Q01,Wueh na hii mvua inaendelea tu,weather_query,news_query
+T20-R033-B5Q02,Ghai na ni saa ngapi,datetime_query,datetime_query
+T20-R033-B5Q03,Wacha niset alarm ya kila siku,alarm_set,alarm_set
+T20-R033-B5Q04,Niko na meeting 4 na nataka kuiadd kwa Calendar as an event,calendar_set,calendar_set
+T20-R033-B5Q05,Siko sure kama hio meeting iko kesho,calendar_query,calendar_query
+T20-R033-B5Q06,Ebu niongezee hii kwa to do list,lists_createoradd,lists_createoradd
+T20-R033-B5Q07,Ebu nisomee list,lists_query,lists_query
+T20-R033-B5Q08,Nataka kucheza kenyan music,play_music,play_music
+T20-R033-B5Q09,What are the biggest current event zinahappen leo,news_query,news_query
+T20-R033-B5Q10,Ebu nielezee kuhusu...,qa_definition,qa_definition
+T20-R043-B5Q04,Let put it on my calendar ndio nisisahau,calendar_set,calendar_set
+T20-R043-B5Q05,Wacha nione kama Kesho kutakuwa Na meeting,calendar_query,weather_query
+T20-R043-B5Q06,Wacha niongeze hii kazi Kwa to do list,lists_createoradd,lists_createoradd
+T20-R043-B5Q08,Sasa which song should I listen to,play_music,datetime_query
+T20-R043-B5Q09,Ni event Gani inatrend,news_query,news_query
+T20-R043-B5Q10,Explain tena,qa_definition,qa_definition

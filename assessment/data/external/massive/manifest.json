@@ -1,0 +1,73 @@
+{
+  "dataset": "MASSIVE",
+  "version": "1.1",
+  "locale": "sw-KE",
+  "source_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+  "dataset_card": "https://huggingface.co/datasets/AmazonScience/massive",
+  "archive_sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+  "locale_member": "1.1/data/sw-KE.jsonl",
+  "locale_sha256": "ecbba1155655fddc049ef501386cf2c16129f78d23f0d306d78ff04bfaa014a3",
+  "licence": "CC-BY-4.0",
+  "source_partition_counts": {
+    "test": 2974,
+    "train": 11514,
+    "dev": 2033
+  },
+  "selected_partition": "train",
+  "selected_labels": [
+    "weather_query",
+    "datetime_query",
+    "alarm_set",
+    "calendar_set",
+    "calendar_query",
+    "lists_createoradd",
+    "lists_query",
+    "play_music",
+    "news_query",
+    "qa_definition"
+  ],
+  "team_csv_sha256": "70f8b3e4dadb211592a0423b934838c678ef57d91e1734dea7538b52e9171384",
+  "team_unique_texts": 417,
+  "rows": 4162,
+  "per_intent": {
+    "alarm_set": 173,
+    "calendar_query": 564,
+    "calendar_set": 804,
+    "datetime_query": 311,
+    "lists_createoradd": 169,
+    "lists_query": 197,
+    "news_query": 494,
+    "play_music": 630,
+    "qa_definition": 267,
+    "weather_query": 553
+  },
+  "exclusions": {
+    "exact_overlap_with_team_text": 7,
+    "duplicate_text_same_label": 94,
+    "duplicate_text_conflicting_labels": 2
+  },
+  "training_pool_sha256": "24deffa0046c944b66b63fb13cb8a5929f4441a6b204acf3b71f825aa15b7031",
+  "samples": {
+    "20": {
+      "available": true,
+      "file": "train_20_per_intent.csv",
+      "rows": 200,
+      "sha256": "030389510273af6266ac42fd730f8e556e6ec04df6c34797486320f2d515ef02"
+    },
+    "50": {
+      "available": true,
+      "file": "train_50_per_intent.csv",
+      "rows": 500,
+      "sha256": "3a667dc7f28dc828ff8d12610be16c430a4416156a4c735e048fcfd06d141b82"
+    }
+  },
+  "status": "prepared_external_data_not_trained",
+  "notes": [
+    "Upstream dev/test rows were inspected for partition counts only, never selected for training.",
+    "Original source IDs, partitions and group IDs retained; no translations or synthetic examples added.",
+    "Exact overlap checked against supplied team snapshot; repeat against FINAL reviewed dataset before fitting.",
+    "Near-duplicate/source relationships require further checking before experiments.",
+    "Upstream labels retained, not independently reviewed by Team 20.",
+    "External rows do not count as new team contributions."
+  ]
+}

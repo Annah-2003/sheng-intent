@@ -1,0 +1,23 @@
+{
+  "data/contribution.csv": "6c78f6b0881ce0fe497a75148982bc50a945e7596639af84b43c41b3ace8c697",
+  "data/external/massive/LICENSE.txt": "c2e6ea015269147de02117ebdd91f30ef09831251f5345fa8365273b1db1d435",
+  "data/external/massive/manifest.json": "a8afe65534a390f15a8329280a51bfb2e2c7ffcae23b46db52c0f1f524928951",
+  "data/external/massive/training_pool.csv": "24deffa0046c944b66b63fb13cb8a5929f4441a6b204acf3b71f825aa15b7031",
+  "data/processed/reviewed.csv": "6c78f6b0881ce0fe497a75148982bc50a945e7596639af84b43c41b3ace8c697",
+  "data/raw/responses.xlsx": "bd5bc0c3474d937b865b8961f7889301862fb5016105f0963e91181317f25b32",
+  "data/review/candidates.csv": "ad9f2d79730e0910b7745b8c406096fcd46a497952811339493f3296af11ee20",
+  "data/review/changes.csv": "93abe6c99a99dc8f317aedc35290dcdc988a3ab99b0aab93371b0e4c13266e14",
+  "data/review/decisions.csv": "60e916719f05f73305250fa13439db5d478ee6f1d25ac2382df3d1876ae4156b",
+  "data/review/metadata.json": "c967799a3cd5a9282495369df24dbab3ce38936b3a74f27a796055b5913ec110",
+  "data/review/permission.md": "85e9d6db49f1d2fc5d7993bc389c221d98328d498bd9437570f7fd261ae7bc71",
+  "data/review/workspace.xlsx": "d5d7b89ee76cade9cbdd8a42210f314b8e27d9505bab99ad8dada0ce1e8ff513",
+  "historical-code/finalize_data.py": "54675a1d3f779157c897b49de2bdacf6654c672a00d0c8927901693c30b0c376",
+  "historical-code/import_kathy_review.py": "99b89c34d4bb87b8161daefbe61324fd7cc8ca87c4dc46938a1d38270cf3e371",
+  "historical-code/prepare_data.py": "e70d71c6cbfff469e0f7d7ca053c7843f50c4141f4f0883574b19da51535c087",
+  "historical-code/README.md": "eea8b2f8255961cdec92e18d35004500d27143568720cae55934340b71135f78",
+  "history/01_original_responses.xlsx": "7d5ef65666b081e38b58de8e1d8c47ff15d69086d99583201f036a5bfaf617f7",
+  "history/03_review_draft.xlsx": "399059d6699317aa16734508917f7078c16e306ff85385c54f66d0c2e6ca0999",
+  "README.md": "3fa8c8bc06a133baf6fd17bbaf0cf5e671d25fad446bd0a2039005f85cb5e934",
+  "reports/development_predictions.csv": "f5b2c55d20bf2ed062451c5e494aa41f2e59bf925c9279b71593f96b5f5cf20f",
+  "reports/test_predictions.csv": "ef93c3025d7f083705cf1eb5c1cd81b89d10fcdc084d1accb13f78f94e2daa83"
+}
