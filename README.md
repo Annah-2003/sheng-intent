@@ -12,7 +12,7 @@ Rada identifies ten request types, including music, weather, alarms, calendars a
 
 ## Watch or try
 
-- [Presentation and demo video folder](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=drive_link)
+- [Presentation and demo video folder](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=sharing)
 - [Live prototype](https://sheng-intent-3nkn9auhiujhbpwvvwirby.streamlit.app/)
 
 ## What we did
