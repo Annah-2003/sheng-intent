@@ -10,6 +10,7 @@ from src.common import ROOT,key,duplicate_key,sha,INTENTS
 from src.evaluate import evaluate
 from sklearn.metrics import accuracy_score,f1_score
 
+@unittest.skipUnless((ROOT/'data/review/decisions.csv').exists(), 'Private assessment inputs are required; public app checks run separately.')
 class ProjectChecks(unittest.TestCase):
     def test_reviewed_subset_is_traceable_and_separated(self):
         data=pd.read_csv(ROOT/'data/processed/reviewed.csv',keep_default_na=False)

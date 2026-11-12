@@ -57,7 +57,7 @@ def train():
         reviewed_sha256=sha(data_path),external_pool_sha256=sha(pool_path),
         removed_external_exact_overlaps=int(overlap.sum()),python=platform.python_version(),sklearn=sklearn.__version__,
         shortfalls=state['shortfalls'],final_test_ready=state['ready_for_final_test'],
-        caveats=['Small development set; selection is uncertain.','Three split minimums still unmet unless readiness changes.',
+        caveats=['Small development set; selection is uncertain.','Read readiness.json for current split minimums; a preparation snapshot is not a final-test result.',
                  'External near-paraphrase overlap cannot be established by exact matching alone.',
                  'Review decisions are inherited from the human workbook; no claim of perfect labels.'])
     (ROOT/'reports/development.json').write_text(json.dumps(result,indent=2),encoding='utf-8')

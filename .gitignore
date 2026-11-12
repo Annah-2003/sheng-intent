@@ -10,3 +10,4 @@ review/
 .env.*
 reports/*predictions.csv
 reports/*.png
+SUBMISSION_MANIFEST.json

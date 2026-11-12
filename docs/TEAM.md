@@ -1,18 +1,13 @@
-# Team and assistance
+# Team contributions and AI assistance
 
-Team 20: Kathy Auma, Irene Gitau, Hafswa Sufi.
-
-| Person | Evidence currently available | Still to record |
+| Member | Work supported by current evidence | Final confirmation |
 | --- | --- | --- |
-| Kathy Auma | Supplied review workbook: accepted/rejected/pending decisions; user identifies Kathy as the fluent reviewer and confirms she authored no submissions | Review dates, remaining adjudications, detailed reasons where missing |
-| Hafswa Sufi | Directs local data/model/UI work, supplies raw/review files and team decisions | Final explanation/checks, run evidence and contribution sign-off |
-| Irene Gitau | Named team member | Actual completed tasks and evidence; do not assume proposed documentation/recording tasks are already done |
+| Kathy Auma | Supplied the reviewed workbook and collection/review report; shared response CSV snapshots through the fork; confirmed as fluent independent reviewer through the user | Confirm actual review dates and missing reasons; verify consent wording evidence |
+| Hafswa Sufi | Coordinated data preparation, follow-up decisions, model comparisons, frozen evaluation, interface, repository organisation and submission packaging with AI assistance | Review the final package, provide video URL and arrange restricted artifact access |
+| Irene Gitau | Named documentation coordinator; the user says the combined team presentation has been recorded. An annotation guide was pushed through Annah-2003, but that account's identity is not assumed here | Confirm her actual completed documentation/checking contribution and ownership of the guide if applicable |
 
-Codex assistance: code for ingestion, comparisons, review import, checks, modelling, tests, notebook,
-documentation drafts, interface and local organisation. No AI-generated utterances were added as human
-contributions. Human language/label decisions come from the supplied review, not an AI review claim.
-The team must check and amend this disclosure and member work records before submission.
+The user confirmed the team has recorded its presentation. The video link has not yet been supplied, so its contents and access have not been verified here. Each member should confirm these statements before submission; planned work is not presented as completed evidence.
 
-Organiser baseline helpers are retained unchanged with their MIT notice. Model algorithms are adapted
-from the kit; the workflow does not claim the starter baseline as original research. External data and
-photograph licences remain separate from code. See DATA.md and assets/PHOTO_CREDIT.md.
+Codex assisted with code, imports, mechanical review checks, model training/evaluation workflow, tests, notebook, interface, organisation, documentation drafts and package checks. Human language/label judgements came from the supplied review and explicit follow-up decisions. No AI-authored utterances were counted as human contributions. Examples proposed for interface/guidance use are separate from the contribution dataset. Earlier Claude planning assistance should also be disclosed to the extent used by the team.
+
+The organiser's baseline, taxonomy and unchanged helpers are reused and credited. MASSIVE rows retain upstream provenance and labels and are counted separately. Neither the baseline algorithm nor this documentation is claimed as independent human language review. Team members remain responsible for checking the generated code, claims, results and rights evidence.

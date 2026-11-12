@@ -1,24 +1,20 @@
-# Submission checklist
+# Final submission checklist
 
-Handbook deadline: 11 November 2026, 23:59 EAT, unless organisers announce a change.
+**Deadline: Thursday 12 November 2026, 23:59 EAT.**
 
-| Criterion | Marks | Current evidence |
-| --- | ---: | --- |
-| Data quality/review | 30 | 324 accepted contributions; human decisions traced to source; held records preserved privately; ambiguous labels disclosed |
-| Provenance/ethics | 20 | Source hashes, external licence and private-assessment permission recorded; public release unconfirmed; AI disclosure drafted |
-| Coverage/balance | 15 | 213 train / 55 development / 56 test; every intent meets 15/5/5 |
-| Baseline/evaluation | 15 | Three development comparisons; selected model frozen; one final test: 43/56, accuracy 76.8%, macro-F1 0.764 |
-| Reproducibility/docs | 10 | Source, dependencies, notebook, hashes and aggregate outputs available; final sign-off/package still pending |
-| Demo/teamwork | 10 | Actual model-connected interface, labelled simulated responses; end-user check, recording and member evidence still pending |
+## Completed evidence
 
-## Remaining team actions
+324 contributions with valid per-intent split counts; source/review trace; frozen models and actual results; runnable app; model comparison; source/licence references; recorded presentation reported by the team. No final-test retuning or relabelling.
 
-- End-user check the website. Choose three actual successes and two real failures/unsupported requests and explain them.
-- Record a 2–3 minute backup demo and verify access from another account/device.
-- Irene: reconcile documents with the saved reports; complete the quality report, source/consent evidence and actual member contributions/AI-use sign-off. See JUDGE_REVIEW.md for substantive limitations.
-- Deploy the prepared app on Streamlit Community Cloud using app.py and Python 3.12, then verify the shared link. Local operation plus the recording remains a backup.
-- Provide judges restricted access to the cleared contribution dataset, source/review evidence and required artifacts. Public Git deliberately excludes private data and per-example predictions.
-- Freeze the final code commit/tag, record the full SHA, create a matching ZIP and manifest (team/language, URLs, counts, licences, metric locations, run instructions, recording and known limitations).
-- Submit via the organiser-announced official channel and retain confirmation. A push to a personal or team repository is not the hand-in.
+## Required before hand-in
 
-Do not change the frozen model, labels or splits to improve the observed final-test score. models/freeze.json records its hashes. Later revised experiments must be separate and explicit.
+1. Replace VIDEO_LINK_TO_ADD in the README with the recorded 2–3 minute presentation/demo link. Check it from another account. Confirm it shows the problem, approach, new input, three successes, two real failures/unsupported inputs, actual results, limitations and member contributions.
+2. Add the restricted assessment delivery location and access steps in DATA_ACCESS.md. Keep private permission evidence and uncleared data out of GitHub. The separate private ZIP is not a public upload.
+3. Each member checks their contribution statement, actual source/consent evidence and the browsable files. A documented 30-record pilot and second-reviewer agreement study are not claimed.
+4. Fork https://github.com/OmondiKevin/sces-nlp-hub-datathon-2026 and copy the public package contents only into teams/team-20/. Replace its placeholder README. Do not change any other team/root folder. Preserve internal project folders; a ZIP alone is not the required browsable submission.
+5. Include the original team repository URL and the full source commit SHA from SUBMISSION_MANIFEST.json. If README/video/access links change afterward, regenerate the package manifest and ZIP from the final commit.
+6. Open one normal, non-draft PR to official main titled Team 20 | Final submission. It must be OPEN before the deadline. Do not merge it yourself; use the same PR for corrections and keep its URL as the receipt.
+
+The deployed website is optional and does not replace the video. Source tag and matching ZIP support traceability but do not replace the open PR. If blocked, contact Kevin/Titus before the deadline with Team 20, the PR/repository URL and the error.
+
+Official guide: https://github.com/OmondiKevin/sces-nlp-hub-datathon-2026/blob/main/SUBMISSION_GUIDE.md
