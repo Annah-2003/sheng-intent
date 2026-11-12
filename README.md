@@ -20,7 +20,7 @@ Rada identifies ten request types, including music, weather, alarms, calendars a
 1. Asked people what they would say to an assistant in everyday situations.
 2. Reviewed their wording and labels; kept **324 human-written examples**.
 3. Used **213 for training, 55 for development and 56 for the final test**. Related scenario groups stayed together.
-4. Compared our data alone with adding 200 or 500 Kiswahili training examples from MASSIVE.
+4. Compared our data alone with adding 200 or 500 Kiswahili training examples from MASSIVE. We selected the version with 500 additional examples.
 5. Selected the best development version, froze it and ran the final test once.
 
 The organiser kit supplied the ten labels and starting model. We contributed the collected data, review work, experiment and demonstration. MASSIVE examples are counted separately.
