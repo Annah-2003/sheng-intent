@@ -16,7 +16,7 @@ Our evidence comes from scenario-based text collection, not an access survey or 
 
 - Collected and retained **324 human-authored contributions**, with source and review decisions traced privately.
 - Compared our-data-only training with two bounded additions of upstream Kiswahili data on the same development set.
-- Built a model-connected interface with plain request names, labelled simulated responses, visible uncertainty and an optional comparison of two phrasings.
+- Built a model-connected assessment demo with plain request names, labelled simulated responses and visible uncertainty.
 - Preserved real failures and ambiguous labels rather than presenting an always-correct assistant.
 
 The ten labels and baseline approach come from the organiser kit. MASSIVE supplies external training examples. Those reused materials are credited separately; external examples do not count as our contributions.
@@ -26,7 +26,7 @@ The ten labels and baseline approach come from the organiser kit. MASSIVE suppli
 - **Website:** https://sheng-intent-3nkn9auhiujhbpwvvwirby.streamlit.app/
 - **Presentation/demo video:** VIDEO_LINK_TO_ADD — recorded; viewable link still required before submission.
 
-Type a request, click **What am I asking?**, and read the predicted request type. The simulated response shows what an assistant might ask or do next. No music, alarm, calendar or external action is executed. The optional wording comparison helps expose when two ways of asking produce different guesses; it is not a measure of whether a speaker's language is correct.
+This is an assessment prototype for judges and the team to inspect the classifier, not a deployed assistant service. Type a request, click **What am I asking?**, and read the predicted request type. The simulated response shows what an assistant might ask or do next. No music, alarm, calendar or external action is executed. The interface is restored to the version used for the team's recorded demonstration.
 
 ## Data and review
 

@@ -31,15 +31,4 @@ class PublicAppChecks(unittest.TestCase):
         self.assertTrue(any('Rada thinks' in x.value for x in app.markdown))
         self.assertTrue(any('Simulated response:' in x.value for x in app.info))
 
-    def test_wording_comparison_explains_its_limits(self):
-        app=AppTest.from_file(str(ROOT/'app.py')).run(timeout=30)
-        app.button(key='compare_wording').click().run(timeout=30)
-        self.assertTrue(any('Enter both versions' in x.value for x in app.info))
-        app.text_input(key='phrasing_a').set_value('Nichezee doba')
-        app.text_input(key='phrasing_b').set_value('Cheza muziki')
-        app.button(key='compare_wording').click().run(timeout=30)
-        self.assertFalse(app.exception)
-        self.assertTrue(any('First wording:' in x.value for x in app.markdown))
-        self.assertTrue(any('does not guarantee' in x.value or 'different categories' in x.value for x in app.caption))
-
 if __name__=='__main__':unittest.main()

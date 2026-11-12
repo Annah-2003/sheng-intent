@@ -55,8 +55,8 @@ words,picture=st.columns([1,1.15],gap='large')
 with words:
     st.markdown('<div class="hello">Sheng kwa assistant.</div>',unsafe_allow_html=True)
     st.title('Unauliza nini?')
-    st.markdown('<p class="lead">Your words. Your request.<br>Can Rada recognise what you mean?</p>',unsafe_allow_html=True)
-    st.write('Ask for music, set an alarm, check the weather—in Kiswahili, Sheng or the mix you use. We’re exploring whether an assistant can recognise the request without asking you to learn a fixed command.')
+    st.markdown('<p class="lead">You write a request in Sheng.<br>Rada guesses what you want to do.</p>',unsafe_allow_html=True)
+    st.write('Ask for music, set an alarm, check the weather. We’re testing whether a model can recognise the request in the way you would actually say it.')
     st.caption('A class prototype by Team 20 · Written Kiswahili/Sheng · Final test completed.')
 with picture:
     if PHOTO.exists():
@@ -110,18 +110,6 @@ with try_it:
         st.write('Weather · Time and date · Alarms · Calendar events · Lists · Music · News · Word meanings')
         st.markdown('**Try changing the wording.** Does it still understand? Then try something it wasn’t trained to recognise.')
         st.caption('It has to pick one of ten categories, even when none fits. If it gets your request wrong, that’s a useful failure to discuss.')
-    with st.expander('Would it recognise another way of saying it?'):
-        st.write('Try two ways of asking for the same thing. This checks this model’s guesses, not whether your language is correct. Your entries are not added to our dataset.')
-        first,second=st.columns(2)
-        with first:phrasing_a=st.text_input('First wording',placeholder='Type one version',key='phrasing_a')
-        with second:phrasing_b=st.text_input('Another wording',placeholder='Say it another way',key='phrasing_b')
-        if st.button('Compare the two requests',key='compare_wording'):
-            if not phrasing_a.strip() or not phrasing_b.strip():
-                st.info('Enter both versions to compare them.')
-            else:
-                guesses=pack['model'].predict([phrasing_a,phrasing_b])
-                st.write('First wording: **'+NAMES[guesses[0]]+'**. Another wording: **'+NAMES[guesses[1]]+'**.')
-                st.caption('It chose the same category for both. That does not guarantee either guess is right.' if guesses[0]==guesses[1] else 'It chose different categories. If you intended the same request, this reveals a wording the model struggles with.')
 
 with results:
     st.subheader('So, does it work?')
@@ -144,8 +132,8 @@ with results:
         labels={'baseline':'Our data only','massive_20':'Our data + 200 MASSIVE examples','massive_50':'Our data + 500 MASSIVE examples'}
         st.dataframe(pd.DataFrame([{'Training data':labels[name],'Correct guesses':f"{round(r['model']['accuracy']*r['dev_rows'])}/{r['dev_rows']}",'Accuracy':f"{r['model']['accuracy']:.1%}"} for name,r in comparison['runs'].items()]),hide_index=True)
         st.caption('Same model settings and same 55 development examples. The best run got two more right than the baseline; this small comparison does not establish final-test performance.')
-        st.subheader('What these results mean')
-        st.write('This is a small scenario-based test, not proof that Rada understands everyone’s Sheng. Similar short phrases and context-dependent requests remain difficult. The recorded demonstration shows both successes and failures.')
+        st.subheader('What we’re checking next')
+        st.write('Final testing is complete. We’re now checking the interface and preparing an honest demonstration of successes and failures. Similar short phrases and context-dependent requests remain limitations.')
         with st.expander('How we measured it'):
             st.write('We use the organiser’s baseline: character TF-IDF and logistic regression. It learns useful patterns of letters from training examples, then uses them to choose one of ten request types.')
             st.write(f"Development accuracy: {m['model']['accuracy']:.4f}. Macro-F1: {m['model']['macro_f1']:.4f}. Majority baseline macro-F1: {m['majority_baseline']['macro_f1']:.4f}.")
@@ -156,10 +144,10 @@ with results:
 
 with about:
     st.subheader('What we wanted to find out')
-    st.write('Useful digital tools should not depend on knowing the right English command. Our longer-term motive is to make everyday assistant interactions more approachable for people who naturally use Kiswahili and Sheng. Rada takes one small step: recognising a request before an assistant could act on it. We have not measured improved access or usability in the wider community.')
+    st.write('Can a small model tell what someone is asking for when they write in Kiswahili and Sheng? That’s the question behind Rada.')
     st.subheader('Where the words came from')
     st.write('We shared everyday situations in a form and asked people to write what they would naturally say to an assistant. Kathy reviewed the original 386 answers. The latest form export has nine additional answers that have not been included in this run. We did not collect audio.')
-    st.write('This run uses 324 accepted answers: 213 for training, 55 for development and 56 for the completed final test. Two original answers were accepted after follow-up review, and one new human-written response was added with permission. We held 24 edited answers, two pending answers, two non-answers and one punctuation-only duplicate; 34 were rejected. Original source files and decisions are preserved privately.')
+    st.write('This run uses 324 accepted answers: 213 for training, 55 for development and 56 reserved for final testing. Two original answers were accepted after follow-up review, and one new human-written response was added with permission. We held 24 edited answers, two pending answers, two non-answers and one punctuation-only duplicate; 34 were rejected. Original source files and decisions are preserved.')
     st.subheader('References')
     st.markdown('- [Photograph: Bone jewelers of Kibera 01](https://commons.wikimedia.org/wiki/File:Bone_jewelers_of_Kibera_01.jpg) — Brian Otieno / Bryan Jaybee, 2017. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Displayed without edits.\n- Strathmore NLP Datathon Starter Kit v2 — the starting code and ten request categories.\n- [MASSIVE 1.1](https://huggingface.co/datasets/AmazonScience/massive) — extra Kiswahili training examples, selected from its training partition. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).')
     st.caption('Team contributions and external training examples are counted separately.')
