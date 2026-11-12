@@ -1,10 +1,10 @@
 # Team contributions and AI use
 
-| Member | Contribution |
-| --- | --- |
-| Kathy Auma | Human review, response files and collection/review documentation |
-| Hafswa Sufi | Data preparation, follow-up review decisions, model experiments, interface and repository work with AI assistance |
-| Irene Gitau | Combined-documentation coordination; confirm the final tasks completed |
+| Role | Member | Responsibilities |
+| --- | --- | --- |
+| Data Lead | Kathy Auma | Coordinate collection, review wording and labels, and maintain review decisions. |
+| Model Lead | Hafswa Sufi | Prepare data/splits, train and evaluate models, and build the demonstration interface. |
+| Documentation Lead | Irene Gitau | Combine report sections and check sources, results, run instructions and the submission checklist. |
 
 The team has recorded its [presentation/demo](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=drive_link). Each member should check the contribution statement before submission.
 

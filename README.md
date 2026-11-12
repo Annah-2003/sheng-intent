@@ -60,12 +60,22 @@ The saved model is included; no API key or retraining is needed. [Validation, tr
 
 ## Team and credits
 
-Kathy handled review and collection documentation. Hafswa coordinated preparation, modelling and the interface with AI assistance. Irene coordinates the combined documentation; final completed tasks need team confirmation. The [team statement](docs/TEAM.md) records assistance and work to confirm.
+**Data Lead — Kathy Auma**
 
-Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). Permission for public release of respondent data is not confirmed, so assessment data stays separate from public code.
+Coordinates collection, reviews the wording and intent labels, and maintains the review decisions.
+
+**Model Lead — Hafswa Sufi**
+
+Prepares the data and splits, trains and evaluates the model, and builds the demonstration interface.
+
+**Documentation Lead — Irene Gitau**
+
+Brings the report sections together and checks the sources, results, run instructions and submission checklist.
+
+AI assistance and the team's contribution statement are recorded in [docs/TEAM.md](docs/TEAM.md).
+
+Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). The response dataset is shared privately for assessment.
 
 **Original team repository:** https://github.com/Annah-2003/sheng-intent
 
-**Exact source version:** full commit SHA in the packaged SUBMISSION_MANIFEST.json and source-version note below.
-
-Submit the browsable project under teams/team-20/ through one open PR before **12 November 2026, 23:59 EAT**. [Final checklist](docs/SUBMISSION.md).
+**Model and code version:** [529dabf21c605c65a022eb8069be2eee2cd494da](https://github.com/Annah-2003/sheng-intent/commit/529dabf21c605c65a022eb8069be2eee2cd494da)
