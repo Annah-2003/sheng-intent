@@ -49,9 +49,9 @@ The saved model is included; no API key or retraining is needed. [Validation, tr
 | Step | Read or open | What it explains |
 | --- | --- | --- |
 | 1. Collect | [Original and later spreadsheets](docs/QUALITY_REPORT.md#from-the-form-to-the-final-dataset) | The responses we gathered. |
-| 2. Review | [Original annotation guide](ANNOTATION_GUIDE.md) and [current status](docs/QUALITY_REPORT.md#how-the-original-guide-maps-to-this-submission) | The labelling rules and how the earlier guide maps to the finished experiment. |
+| 2. Review | [Original annotation guide](ANNOTATION_GUIDE.md) and [review summary](docs/QUALITY_REPORT.md#review-guide-and-final-export) | Labelling rules and the status of the completed export. |
 | 3. Prepare | [Cleaning report](docs/QUALITY_REPORT.md), [source log](docs/SOURCE_LOG.csv), src/prepare.py | Human decisions, code checks and changes. |
-| 4. Freeze the data | [Dataset card](docs/DATASET_CARD.md) and [assessment files](docs/DATA_ACCESS.md) | The final 324 records and their splits. |
+| 4. Final dataset | [contribution.csv](https://github.com/Annah-2003/sheng-intent/blob/b1ab031b6357174afce8b8040b9abecc1e51797d/assessment/data/contribution.csv), [split counts](reports/split_counts.csv) and [dataset card](docs/DATASET_CARD.md) | 324 accepted records: 213 training, 55 development and 56 test. The CSV's split column identifies each record's assignment. |
 | 5. Train and test | [Results and five errors](docs/RESULTS.md), reports/test.json, reports/confusion_matrix.csv | Model comparison, final scores and failures. |
 | 6. Demonstrate | Video link above, app.py and [design explanation](docs/HCI_DESIGN.md) | What the prototype does and how the interaction works. |
 | 7. Check contributions | [Team and AI-use statement](docs/TEAM.md) | Responsibilities and reused material. |
