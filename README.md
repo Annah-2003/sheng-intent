@@ -74,7 +74,7 @@ Brings the report sections together and checks the sources, results, run instruc
 
 AI assistance and the team's contribution statement are recorded in [docs/TEAM.md](docs/TEAM.md).
 
-Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). The response dataset is shared privately for assessment.
+Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). The response dataset is shared for assessment through [the private team repository](https://github.com/Annah-2003/sheng-intent/tree/b1ab031b6357174afce8b8040b9abecc1e51797d/assessment); judges need access from its owner.
 
 **Original team repository:** https://github.com/Annah-2003/sheng-intent
 

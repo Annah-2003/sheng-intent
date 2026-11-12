@@ -15,6 +15,8 @@ def check(root,strict=False):
     access=(root/'docs/DATA_ACCESS.md').read_text(encoding='utf-8') if (root/'docs/DATA_ACCESS.md').exists() else ''
     if 'ASSESSMENT_ACCESS_TO_ADD' in access or 'TEAM_TO_COMPLETE' in access:
         pending.append('Add restricted assessment-data delivery location and judge access steps.')
+    if 'JUDGE_ACCESS_TO_CONFIRM' in access:
+        pending.append('Repository owner must confirm judges can access the private assessment files.')
     for path in (root/'docs').glob('*.md'):
         text=path.read_text(encoding='utf-8')
         for link in re.findall(r'\]\(([^)]+)\)',text):

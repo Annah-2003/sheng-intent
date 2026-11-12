@@ -1,11 +1,13 @@
 # Assessment data access
 
-The response data is permitted for private academic assessment. Public release is not confirmed, so do not upload the private ZIP to GitHub.
+The assessment files are in [Annah's private repository](https://github.com/Annah-2003/sheng-intent/tree/b1ab031b6357174afce8b8040b9abecc1e51797d/assessment). No Drive folder is needed for these files.
 
-- File: **Team20_Assessment_Private.zip**.
-- Dataset: data/contribution.csv — 324 rows, already split 213/55/56.
-- Also included: original response/review files, decisions, permission record, external training inputs and per-example predictions.
-- Delivery link or agreed organiser channel: **ASSESSMENT_ACCESS_TO_ADD**.
-- Retrieval steps for judges: **TEAM_TO_COMPLETE**.
+1. The repository owner grants the judges access to Annah-2003/sheng-intent.
+2. Judges sign into that GitHub account and open the linked assessment folder.
+3. Follow the [file sequence](QUALITY_REPORT.md#from-the-form-to-the-final-dataset), or download [the final dataset](https://github.com/Annah-2003/sheng-intent/blob/b1ab031b6357174afce8b8040b9abecc1e51797d/assessment/data/contribution.csv) directly.
 
-Extract both ZIPs into the same parent folder. Their teams/team-20/ contents will align. Keep the combined copy private. Exact dataset/model hashes are in the manifests; running instructions are in REPRODUCIBILITY.md.
+**JUDGE_ACCESS_TO_CONFIRM:** the repository is verified private, but the judges' access has not been confirmed. The repository owner must handle invitations; the coding assistant does not have administrator access.
+
+The dataset has 324 rows, already split 213/55/56. The folder also contains the original and reviewed spreadsheets, decision logs, permission record, external training inputs and predictions. The file links are pinned to version `b1ab031b6357174afce8b8040b9abecc1e51797d`.
+
+Team20_Assessment_Private.zip remains an offline backup. Extract both ZIPs into the same parent folder to run the private checks. Public response-data release is not confirmed: do not copy assessment/ or the private ZIP into the organiser's public repository.
