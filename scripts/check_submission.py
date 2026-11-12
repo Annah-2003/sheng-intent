@@ -1,4 +1,4 @@
-"""Check a packaged Team 20 project without revealing private evidence."""
+"""Check the local submission files and recorded model hashes."""
 from pathlib import Path
 import argparse,hashlib,json,re,sys
 
@@ -14,9 +14,7 @@ def check(root,strict=False):
     if 'VIDEO_LINK_TO_ADD' in readme:pending.append('Add and independently verify the recorded video URL.')
     access=(root/'docs/DATA_ACCESS.md').read_text(encoding='utf-8') if (root/'docs/DATA_ACCESS.md').exists() else ''
     if 'ASSESSMENT_ACCESS_TO_ADD' in access or 'TEAM_TO_COMPLETE' in access:
-        pending.append('Add restricted assessment-data delivery location and judge access steps.')
-    if 'JUDGE_ACCESS_TO_CONFIRM' in access:
-        pending.append('Repository owner must confirm judges can access the private assessment files.')
+        pending.append('Add the dataset location and retrieval steps.')
     for path in (root/'docs').glob('*.md'):
         text=path.read_text(encoding='utf-8')
         for link in re.findall(r'\]\(([^)]+)\)',text):
@@ -38,7 +36,8 @@ def check(root,strict=False):
         if freeze!=final['freeze'] or freeze['model_sha256']!=selected['model_sha256']:errors.append('Frozen model/result mismatch.')
         model=root/'models'/f"{selected['condition']}.joblib"
         if hashlib.sha256(model.read_bytes()).hexdigest()!=freeze['model_sha256']:errors.append('Selected model checksum mismatch.')
-    result={'structural_errors':errors,'pending_before_submission':pending,'ready_for_hand_in':not errors and not pending}
+    result={'structural_errors':errors,'pending_file_details':pending,'local_file_checks_passed':not errors and not pending,
+        'manual_checks':['Check the repository and data links while signed out.','Check the supplied video link.','Open the official Team 20 submission PR.']}
     print(json.dumps(result,indent=2))
     return 1 if errors else (2 if strict and pending else 0)
 

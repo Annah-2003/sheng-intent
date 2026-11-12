@@ -12,7 +12,7 @@ python -m unittest discover -s tests -p test_public_app.py
 
 The model is included. No API key, raw data or retraining is needed. requirements-lock.txt records the original environment; scikit-learn was 1.7.2.
 
-## Check the private assessment files
+## Check our dataset and results
 
 Extract Team20_Complete.zip, then enter teams/team-20/:
 

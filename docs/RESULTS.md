@@ -33,7 +33,7 @@ Full precision/recall/F1: reports/per_intent_test.csv. Confusion matrix: reports
 
 ## Five actual errors
 
-There were 13 disagreements with the reviewed labels. These are possible explanations, not proven causes. Original wording is in the private prediction file.
+There were 13 disagreements with the reviewed labels. These are possible explanations, not proven causes. Our [test predictions](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/reports/test_predictions.csv) include the original wording.
 
 | Record | Reviewed intent → prediction | What we learned |
 | --- | --- | --- |

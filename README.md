@@ -51,13 +51,13 @@ The saved model is included; no API key or retraining is needed. [Validation, tr
 | 1. Collect | [Original and later spreadsheets](docs/QUALITY_REPORT.md#from-the-form-to-the-final-dataset) | The responses we gathered. |
 | 2. Review | [Original annotation guide](ANNOTATION_GUIDE.md) and [review summary](docs/QUALITY_REPORT.md#review-guide-and-final-export) | Labelling rules and the status of the completed export. |
 | 3. Prepare | [Cleaning report](docs/QUALITY_REPORT.md), [source log](docs/SOURCE_LOG.csv), src/prepare.py | Human decisions, code checks and changes. |
-| 4. Final dataset | [contribution.csv](https://github.com/Annah-2003/sheng-intent/blob/b1ab031b6357174afce8b8040b9abecc1e51797d/assessment/data/contribution.csv), [split counts](reports/split_counts.csv) and [dataset card](docs/DATASET_CARD.md) | 324 accepted records: 213 training, 55 development and 56 test. The CSV's split column identifies each record's assignment. |
+| 4. Final dataset | [contribution.csv](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/contribution.csv), [split counts](reports/split_counts.csv) and [dataset card](docs/DATASET_CARD.md) | 324 accepted records: 213 training, 55 development and 56 test. The CSV's split column identifies each record's assignment. |
 | 5. Train and test | [Results and five errors](docs/RESULTS.md), reports/test.json, reports/confusion_matrix.csv | Model comparison, final scores and failures. |
 | 6. Demonstrate | Video link above, app.py and [design explanation](docs/HCI_DESIGN.md) | What the prototype does and how the interaction works. |
 | 7. Check contributions | [Team and AI-use statement](docs/TEAM.md) | Responsibilities and reused material. |
 | 8. Run it | [Full commands](docs/REPRODUCIBILITY.md), src/, notebooks/, models/ | Installation, saved models and reconstruction. |
 
-The original guide is preserved unchanged. Its dated snapshot is explained separately in the cleaning report; it is not silently rewritten to match later results.
+We kept our original annotation guide unchanged. The cleaning report explains how its earlier snapshot relates to our final dataset.
 
 ## Team and credits
 
@@ -75,7 +75,7 @@ Brings the report sections together and checks the sources, results, run instruc
 
 AI assistance and the team's contribution statement are recorded in [docs/TEAM.md](docs/TEAM.md).
 
-Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). The response dataset is shared for assessment through [the private team repository](https://github.com/Annah-2003/sheng-intent/tree/b1ab031b6357174afce8b8040b9abecc1e51797d/assessment); judges need access from its owner.
+Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). Our [spreadsheets, review logs and final dataset](https://github.com/Annah-2003/sheng-intent/tree/main/assessment) show how we prepared the data.
 
 **Original team repository:** https://github.com/Annah-2003/sheng-intent
 
