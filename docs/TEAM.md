@@ -6,8 +6,8 @@
 | Model Lead | Hafswa Sufi | Prepare data/splits, train and evaluate models, and build the demonstration interface. |
 | Documentation Lead | Irene Gitau | Combine report sections and check sources, results, run instructions and the submission checklist. |
 
-The team has recorded its [presentation/demo](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=drive_link). Each member should check the contribution statement before submission.
+The team has recorded its [presentation/demo](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=drive_link). 
 
-Codex assisted with code, mechanical checks, training/evaluation workflow, tests, interface, organisation and documentation. Claude helped with earlier planning. Human language and label decisions are recorded separately. No AI-written responses were counted as human contributions.
+Codex assisted with code, mechanical checks, training/evaluation workflow, tests,iterface and organisation. Human language and label decisions are recorded separately. No AI-written responses were counted as human contributions.
 
 The taxonomy and starting model came from the organiser kit. MASSIVE examples retain their upstream labels and are counted separately. Source credits and licences are in SOURCE_LOG.csv.
