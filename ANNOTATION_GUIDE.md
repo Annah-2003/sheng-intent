@@ -2,12 +2,14 @@
 
 **Project:** Rada, Team 20, Strathmore NLP Hub Datathon 2026  
 **Task:** Single-label intent classification  
-**Version:** 1.1, updated from Team 20's *Sheng in Context* collection and review snapshot  
+**Version:** 1.2, final submission update, 12 November 2026  
 **Primary language:** Kiswahili/Sheng code-switching, as written by respondents  
 **Unit:** One response to one collection scenario  
 **Label set:** The ten intent labels in `taxonomy.csv`
 
-> **Evidence status (11 November 2026 snapshot):** Team documentation reports that the reviewer did not submit form responses, and that the review workspace contains 350 accepted, 34 rejected and 2 needs_review decisions. However, reviewer codes, review_status and splits were not populated in the workspace, and the report says competence in the specific Sheng variety still needs confirmation. Treat these as reported workflow facts, not verified completed independent review. The local Kiswahili/Sheng examples in this guide are proposed illustrations; they are not claimed as reviewer-approved examples.
+**Submission status:** Our completed review workbook covers 386 original answers: 350 marked accepted, 34 rejected and two pending. After recorded holds, follow-up decisions and one new consented human answer, we used **324 records: 213 training, 55 development and 56 test**. Reviewer codes, review status and splits are present in our exported records. We recorded human confirmations of reviewer competence and independence; all 56 test records have independent-review status. The examples in this guide illustrate the rules and are not additional collected records.
+
+We updated the status and file references after evaluation; we did not change the frozen dataset or test labels. Our [original version 1.1](docs/history/ANNOTATION_GUIDE_v1.1.md) remains available unchanged.
 
 ## 1. Purpose and scope
 
@@ -32,7 +34,7 @@ Do not force an in-scope label onto an unsupported request, a statement, a react
 3. Check the ten definitions and the boundary examples below.
 4. If exactly one supported action is clear, accept it with that label.
 5. If no supported action is clear, or multiple actions compete, mark needs_review (or rejected when the reason is clear, such as a confirmed duplicate) and explain why.
-6. Record the reviewer code, independence from the author, decision, final label when accepted, and reason when needed in the review workspace and final `private/review_decisions.csv` export.
+6. Record the reviewer code, independence from the author, decision, final label when accepted, and reason when needed in the review workspace and our [exported decisions](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/review/decisions.csv).
 
 ### Five acceptance tests
 
@@ -46,13 +48,13 @@ Accept a response only when all five checks pass:
 
 ## 3. Label inventory and boundaries
 
-The Kiswahili illustrations below are working illustrations. They must be checked by a competent speaker for naturalness and intended meaning before being used as gold examples.
+The examples below explain the label boundaries. They are illustrations, not claims of additional collected or independently approved gold records.
 
-| Label | Assign when the response asks the assistant to… | Boundary / do not confuse with… | Working illustration (needs fluent review) |
+| Label | Assign when the response asks the assistant to… | Boundary / do not confuse with… | Illustration |
 | --- | --- | --- | --- |
 | `weather_query` | Give current or future weather information or a forecast. | Asking for a report about a storm that happened is `news_query`; general rain-related advice is not automatically weather. | “Kesho kutanyesha?” |
 | `datetime_query` | Tell the current time, date or day. | Setting an alarm is `alarm_set`; asking for time-management advice is outside this label. | “Saa ngapi sasa?” |
-| `alarm_set` | Set an alarm to ring at a time or under a clear wake-up condition. | Asking what time it is is `datetime_query`. A timer or countdown is not covered by this label unless the taxonomy owner confirms it belongs here. | “Niwekee alarm ya saa kumi na mbili.” |
+| `alarm_set` | Set an alarm to ring at a time or under a clear wake-up condition. | Asking what time it is is `datetime_query`. Judge the requested action, not the presence of a time expression. A countdown-only request needs human review; the supplied taxonomy does not define a separate timer label. | “Niwekee alarm ya saa kumi na mbili.” |
 | `calendar_set` | Add an event or scheduled reminder to a calendar. | Asking what is already scheduled is `calendar_query`; setting a ringing alarm is `alarm_set`. | “Weka meeting yangu ya Ijumaa kwa calendar.” |
 | `calendar_query` | Read or check existing calendar events or schedule. | Adding a new event is `calendar_set`. | “Leo niko na meeting gani?” |
 | `lists_createoradd` | Create a list or add an item to an existing list. | Reading/listing items is `lists_query`. If create-versus-add is not clear but list modification is, this shared label still applies. | “Ongeza maziwa kwa shopping list.” |
@@ -86,57 +88,68 @@ These are guide examples, not claims that the same phrases occur in the collecte
 - Do not translate, normalize vocabulary, replace slang, or rewrite a fragment into a complete request.
 - Existing preparation applies NFC Unicode normalization and whitespace normalization for processing. Those mechanical changes do not certify fluency or meaning; consult the original response when judging it.
 - If a reviewer cannot confidently understand the response or its language variety, choose discuss and seek a competent speaker. Record disagreement rather than silently standardizing the text.
-- Do not include or repeat personal/sensitive details in notes unless strictly needed for private adjudication.
+- Do not include or repeat personal/sensitive details in notes unless strictly needed for review.
 
 ## 6. Review and disagreement resolution
 
 Use pseudonymous reviewer codes, not names, in the decision file. Reviewers should disclose any responses they authored. A reviewer is independent of an author only when they did not write that response. Every final test example must have a competent reviewer who did not author it. Do not infer independence from an anonymous row code.
 
-The project completion plan calls for an auditable **30-record review pilot (three records from each intent)**. Select varied items within each label, including code-switching and uncertain cases. Record which records were selected and the selection method. Have a second competent speaker independently annotate the pilot where feasible, then compare decisions. Log initial decisions, disagreement, resolution and any guide change. Because collection has already happened, describe this as a post-collection review pilot, not a pre-collection pilot. The supplied project report says this auditable pilot table still needs to be documented; do not claim it is complete unless the review table exists.
+We do not have a separate documented 30-record pilot or a reviewer-agreement statistic in this submission. We do not claim those checks were completed. The recorded review covers the actual dataset: T20-KATHY reviewed 321 retained records, and T20-HAFSWA reviewed three follow-up records. Our reviewer registry records competence and independence confirmations. The original workbooks do not separately record every review date.
 
 For each disagreement:
 
-1. Preserve both initial decisions and concise rationales in the private review log.
+1. Preserve both initial decisions and concise rationales in our review log.
 2. Discuss the requested action and the written label boundary, not which label seems more convenient for model balance.
 3. If the disagreement is resolved, record the adjudicated label, reviewer code and reason; update this guide if the rule is reusable.
 4. If it remains unclear, mark discuss or exclude with a reason. Do not force a label.
 5. Recheck all earlier affected items after a boundary rule changes.
 
-Record the guide version/date, reviewer competence confirmation, independence checks, number of items double-reviewed, disagreements, resolutions and exclusions. Do not claim a review, fluent check or agreement statistic unless it actually happened and is documented.
+We retain the guide version, reviewer confirmations, decisions, holds and exclusions in the linked records. We do not report a double-review count or agreement score. Questions found after the final test are discussed in [our error analysis](docs/RESULTS.md), not used to relabel the frozen test.
 
 ## 7. Dataset and split safeguards
 
 The response is the annotation unit, but related paraphrases must not leak across data splits. Review `scenario_id` groups and near-duplicate meanings across different scenarios; record a common `related_group_override` where appropriate. Keep each related group entirely in one split. Resolve grouping before final model selection and test evaluation, never in response to test mistakes.
 
-The supplied collection snapshot reports 386 non-empty candidate messages from 44 form submissions (54 of 440 possible responses were blank). It reports 350 marked accepted, 34 rejected and 2 needs_review, but explicitly says reviewer codes and split assignments are missing and that the required review_status field must be restored. These are current spreadsheet statuses, not validated accepted-data counts. An earlier project workflow had provisional scenario-batch splits; the newer collection report says no train/dev/test values are populated in the connected review workspace. Therefore do not describe any split as final until it is actually assigned and checked. The minimum is 250 accepted records and at least 25 per intent (15 train, 5 dev, 5 test); the team's optional target is 300 (18/6/6 per intent). Use stratified, group-aware splits so close variants stay together. Every test item needs documented independent review. A contributor-held-out subset can be reported as an additional robustness check only if the required class counts remain feasible.
+Our original collection contained 386 answers from 44 submissions. The later export contains 395 answers from 45 submissions; nine later answers were not imported as reviewed contributions. The final accepted dataset contains 324 records.
+
+| Split | Records | Scenario batches |
+| --- | ---: | --- |
+| Training | 213 | 1 and 2 |
+| Development | 55 | 3 |
+| Test | 56 | 4 and 5 |
+
+Every intent meets the minimum of 15 training, five development and five test examples. We checked scenario-group separation and punctuation-only duplicates. The final CSV records each example's group and split. Respondents can occur in more than one split, and similar meanings across scenarios may still overlap; this is not an unseen-speaker evaluation.
+
+All test records have independently_reviewed status. We selected the model using development results, froze the data/model and evaluated the final test once. We did not move groups or change labels in response to test errors. Per-intent counts are in [split_counts.csv](reports/split_counts.csv).
 
 ## 8. Required decision record
 
-Use `private/review_decisions.csv`; do not commit or publish it by default. For each candidate, complete the applicable fields:
+Our [decision file](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/review/decisions.csv) retains the workbook decision and import action separately. The workbook uses accepted/rejected/needs_review; our code uses accept/exclude/discuss. Some workbook acceptances were held by the import checks rather than automatically retained. Only records with an accept decision enter the final contribution file.
 
 | Field | Required record |
 | --- | --- |
-| `decision` | `accepted`, `rejected`, or `needs_review` (match the live review workspace; map carefully to any export schema) |
-| `final_label` | Exactly one canonical label for accepted rows; blank otherwise |
+| `decision` | Exported status: `accept`, `exclude` or `discuss`; original workbook status stays in `workbook_decision`. |
+| `final_label` | One canonical label for accepted rows. Excluded/held records retain their source label for tracing; they are not fitted. |
 | `reviewer_code` | Pseudonymous code for the actual reviewer |
 | `reviewer_independent_of_author` | `yes`, `no`, or `unknown`, based on actual knowledge |
 | `reason` | Label rationale for changes, exclusion/discussion reason, or disagreement resolution as appropriate |
-| `related_group_override` | Shared identifier for semantically related paraphrases requiring the same split group; blank if none identified |
+| `related_group_override` | Proposed grouping change for review; blank in this export. The final CSV records the actual `group_id`. |
 
-Keep the source text, collection provenance, permission evidence and reviewer log linked through the private workflow. Do not invent source rights, reviewer claims, language validation, counts, results, consent scope, or contribution statements.
+We link original wording, source row/scenario, human decisions and code holds in [our cleaning report](docs/QUALITY_REPORT.md). We retain actual evidence and do not invent missing review reasons, dates or approvals.
 
-## 9. Change log and sign-off
+## 9. Change log and review record
 
-| Version | Date | Change | Status |
-| --- | --- | --- | --- |
-| 1.0 | 12 November 2026 | Drafted from the Team 20 intent taxonomy, app, collection workflow and review requirements. | Project-specific draft. |
-| 1.1 | 12 November 2026 | Added the reported five-batch scenario collection design, English-prompt limitation, five acceptance tests, live decision terms, 30-record post-collection pilot requirement, and 11 November review/split status. | Updated from the *Sheng in Context* evidence snapshot; reviewer identifiers, competence confirmation, decisions and split validation remain to be evidenced. |
+| Version | Date | Change |
+| --- | --- | --- |
+| 1.0 | 12 November 2026 | Initial project-specific guide. |
+| 1.1 | 12 November 2026 | Expanded collection context, rules and earlier review snapshot. Preserved in docs/history/. |
+| 1.2 | 12 November 2026 | Updated completed review evidence, final counts/splits, actual file paths and export terms. Rules and examples retained; no test labels changed. |
 
-| Reviewer check | Record actual value |
+| Review item | Recorded status |
 | --- | --- |
-| Reviewer independence | Project report says reviewer did not submit responses; verify and record in review registry |
-| Reviewer code and language variety/competence | Not populated/confirmed in the evidence snapshot |
-| Date checked | Review workspace evidence still required |
-| Wording/examples changed and reason | Record from the auditable 30-record pilot |
-| Final approval for annotation use | Pending documented pilot, reviewer metadata and adjudication |
-
+| Reviewer competence and independence | Human confirmations recorded in the reviewer registry for T20-KATHY and T20-HAFSWA. |
+| Accepted review records | 321 attributed to T20-KATHY; three to T20-HAFSWA; all 56 test records independently reviewed. |
+| Exact workbook review dates | Not separately recorded for every decision. |
+| Holds and follow-up decisions | Recorded in the exported decisions and change log. |
+| Separate 30-record pilot / agreement study | Not documented; no completion or agreement score claimed. |
+| Remaining quality limits | Fifteen rejection reasons are missing, and some accepted labels remain debatable. See the quality report and actual errors. |

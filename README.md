@@ -49,7 +49,7 @@ The saved model is included; no API key or retraining is needed. [Validation, tr
 | Step | Read or open | What it explains |
 | --- | --- | --- |
 | 1. Collect | [Original and later spreadsheets](docs/QUALITY_REPORT.md#from-the-form-to-the-final-dataset) | The responses we gathered. |
-| 2. Review | [Original annotation guide](ANNOTATION_GUIDE.md) and [review summary](docs/QUALITY_REPORT.md#review-guide-and-final-export) | Labelling rules and the status of the completed export. |
+| 2. Review | [Annotation guide](ANNOTATION_GUIDE.md) and [review summary](docs/QUALITY_REPORT.md#review-guide-and-final-export) | Labelling rules and the status of the completed export. |
 | 3. Prepare | [Cleaning report](docs/QUALITY_REPORT.md), [source log](docs/SOURCE_LOG.csv), src/prepare.py | Human decisions, code checks and changes. |
 | 4. Final dataset | [contribution.csv](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/contribution.csv), [split counts](reports/split_counts.csv) and [dataset card](docs/DATASET_CARD.md) | 324 accepted records: 213 training, 55 development and 56 test. The CSV's split column identifies each record's assignment. |
 | 5. Train and test | [Results and five errors](docs/RESULTS.md), reports/test.json, reports/confusion_matrix.csv | Model comparison, final scores and failures. |
@@ -57,7 +57,7 @@ The saved model is included; no API key or retraining is needed. [Validation, tr
 | 7. Check contributions | [Team and AI-use statement](docs/TEAM.md) | Responsibilities and reused material. |
 | 8. Run it | [Full commands](docs/REPRODUCIBILITY.md), src/, notebooks/, models/ | Installation, saved models and reconstruction. |
 
-We kept our original annotation guide unchanged. The cleaning report explains how its earlier snapshot relates to our final dataset.
+Our annotation guide keeps the original rules and examples, with updated status and file references. We preserved [version 1.1](docs/history/ANNOTATION_GUIDE_v1.1.md) unchanged for reference.
 
 ## Team and credits
 

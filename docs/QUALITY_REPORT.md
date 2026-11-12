@@ -2,7 +2,7 @@
 
 ## Review guide and final export
 
-Our [original guide](../ANNOTATION_GUIDE.md) contains the annotation rules and an earlier review snapshot. We kept it unchanged as the original record. Its pending-status notes should be read alongside the completed export below: reviewer codes, review status and splits are recorded in the decisions and final CSV. The final dataset contains 324 records, not all 350 workbook acceptances. A documented 30-record pilot is not available.
+Our [annotation guide](../ANNOTATION_GUIDE.md) is version 1.2, updated to describe the final export. It keeps the original rules and examples; [version 1.1](history/ANNOTATION_GUIDE_v1.1.md) remains unchanged. Reviewer codes, review status and splits are recorded in the decisions and final CSV. We used 324 records, not all 350 workbook acceptances. A separate documented 30-record pilot is not available.
 
 | Reference in the original guide | File used in this submission |
 | --- | --- |

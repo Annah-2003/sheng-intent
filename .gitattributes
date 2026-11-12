@@ -2,3 +2,4 @@ assessment/** -text
 models/*.joblib -text
 *.xlsx -text
 ANNOTATION_GUIDE.md -text
+docs/history/ANNOTATION_GUIDE_v1.1.md -text
