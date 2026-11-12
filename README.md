@@ -61,6 +61,8 @@ Our annotation guide keeps the original rules and examples, with updated status 
 
 ## Team and credits
 
+We used [ClickUp](https://app.clickup.com/9012897541/v/s/901211092343) to assign tasks and track our progress.
+
 **Data Lead — Kathy Auma**
 
 Coordinates collection, reviews the wording and intent labels, and maintains the review decisions.
