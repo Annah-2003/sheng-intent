@@ -14,7 +14,7 @@ The model is included. No API key, raw data or retraining is needed. requirement
 
 ## Check the private assessment files
 
-Extract the public and private ZIPs into the same parent folder, then enter teams/team-20/:
+Extract Team20_Complete.zip, then enter teams/team-20/:
 
 ```bash
 python src/starter/validate.py --track intent --data data/contribution.csv

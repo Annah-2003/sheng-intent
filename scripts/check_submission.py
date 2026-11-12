@@ -4,7 +4,7 @@ import argparse,hashlib,json,re,sys
 
 def check(root,strict=False):
     errors=[];pending=[]
-    required=['README.md','app.py','requirements.txt','docs/ANNOTATION_GUIDE.md','docs/DATASET_CARD.md',
+    required=['README.md','app.py','requirements.txt','ANNOTATION_GUIDE.md','taxonomy.csv','docs/DATASET_CARD.md',
         'docs/QUALITY_REPORT.md','docs/SOURCE_LOG.csv','docs/TEAM.md','docs/DATA_ACCESS.md',
         'docs/RESULTS.md','docs/REPRODUCIBILITY.md','models/selection.json','models/freeze.json',
         'reports/test.json','reports/development.json','reports/split_counts.csv']

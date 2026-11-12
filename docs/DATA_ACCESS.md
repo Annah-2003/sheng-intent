@@ -10,4 +10,4 @@ The assessment files are in [Annah's private repository](https://github.com/Anna
 
 The dataset has 324 rows, already split 213/55/56. The folder also contains the original and reviewed spreadsheets, decision logs, permission record, external training inputs and predictions. The file links are pinned to version `b1ab031b6357174afce8b8040b9abecc1e51797d`.
 
-Team20_Assessment_Private.zip remains an offline backup. Extract both ZIPs into the same parent folder to run the private checks. Public response-data release is not confirmed: do not copy assessment/ or the private ZIP into the organiser's public repository.
+Team20_Complete.zip contains one complete local project, including the assessment evidence. Extract it and enter teams/team-20/ to run the checks. Public response-data release is not confirmed: do not copy assessment/ or the private ZIP into the organiser's public repository.

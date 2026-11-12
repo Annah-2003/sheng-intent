@@ -1,5 +1,15 @@
 # Cleaning and review report
 
+## How the original guide maps to this submission
+
+The [original guide](../ANNOTATION_GUIDE.md) is restored unchanged from commit 4d2e4c0b. Its status notes describe an earlier workbook snapshot, not the final export. Reviewer codes, review status and splits are recorded in the exported decisions and final CSV; the completed experiment uses 324 records, not all 350 workbook acceptances. The proposed 30-record pilot is not claimed as completed.
+
+| Earlier guide reference | Current file |
+| --- | --- |
+| taxonomy.csv | [Original label taxonomy](../taxonomy.csv) |
+| private/review_decisions.csv | The exported decisions linked in step 5 below |
+| Final accepted records and splits | contribution.csv linked in step 6 below |
+
 ## From the form to the final dataset
 
 These links open files in Annah's **private** repository. Judges need GitHub access from the repository owner. Excel files can be downloaded; CSV files also open in Excel.

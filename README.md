@@ -44,19 +44,20 @@ python -m streamlit run app.py
 
 The saved model is included; no API key or retraining is needed. [Validation, training, evaluation and test commands](docs/REPRODUCIBILITY.md).
 
-## Required files
+## Follow the project
 
-| Material | Where to find it |
-| --- | --- |
-| Contribution data, splits and review evidence | [Restricted access instructions](docs/DATA_ACCESS.md) |
-| Annotation rules | [Annotation guide](docs/ANNOTATION_GUIDE.md) |
-| Sources and permissions | [Source log](docs/SOURCE_LOG.csv) and docs/licenses/ |
-| Dataset summary | [Dataset card](docs/DATASET_CARD.md) |
-| Cleaning and review checks | [Quality report](docs/QUALITY_REPORT.md) |
-| Team contributions and AI use | [Team statement](docs/TEAM.md) |
-| Results and confusion matrix | [Results](docs/RESULTS.md), reports/test.json and reports/confusion_matrix.csv |
-| Model and code | models/, src/, notebooks/ and app.py |
-| Design explanation | [Human-centred approach](docs/HCI_DESIGN.md) |
+| Step | Read or open | What it explains |
+| --- | --- | --- |
+| 1. Collect | [Original and later spreadsheets](docs/QUALITY_REPORT.md#from-the-form-to-the-final-dataset) | The responses we gathered. |
+| 2. Review | [Original annotation guide](ANNOTATION_GUIDE.md) and [current status](docs/QUALITY_REPORT.md#how-the-original-guide-maps-to-this-submission) | The labelling rules and how the earlier guide maps to the finished experiment. |
+| 3. Prepare | [Cleaning report](docs/QUALITY_REPORT.md), [source log](docs/SOURCE_LOG.csv), src/prepare.py | Human decisions, code checks and changes. |
+| 4. Freeze the data | [Dataset card](docs/DATASET_CARD.md) and [assessment files](docs/DATA_ACCESS.md) | The final 324 records and their splits. |
+| 5. Train and test | [Results and five errors](docs/RESULTS.md), reports/test.json, reports/confusion_matrix.csv | Model comparison, final scores and failures. |
+| 6. Demonstrate | Video link above, app.py and [design explanation](docs/HCI_DESIGN.md) | What the prototype does and how the interaction works. |
+| 7. Check contributions | [Team and AI-use statement](docs/TEAM.md) | Responsibilities and reused material. |
+| 8. Run it | [Full commands](docs/REPRODUCIBILITY.md), src/, notebooks/, models/ | Installation, saved models and reconstruction. |
+
+The original guide is preserved unchanged. Its dated snapshot is explained separately in the cleaning report; it is not silently rewritten to match later results.
 
 ## Team and credits
 
