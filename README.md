@@ -38,6 +38,8 @@ app.py: Streamlit demo for the three trained tracks. It reports the predicted la
 templates/: blank planning, annotation, data-card, quality and contribution outlines.
 examples/: completed fictional teaching documents. Never copy their permission/evaluation claims into a real submission.
 
+Team 20's project-specific annotation rules are in [ANNOTATION_GUIDE.md](ANNOTATION_GUIDE.md). It is a draft awaiting fluent-speaker review; the blank template and fictional completed example remain teaching resources, not evidence of completed annotation.
+
 ## Scope and disclosure
 Intent describes requested action; sentiment describes opinion; limited semantic parsing adds slots. Sentiment is not emotion detection; semantic baseline is not a general text-to-SQL system. The slot baseline cannot extract unknown surface values reliably. Report failures on an explicit unseen-value test subset.
 Reuse and credit this starter code. Document other datasets, models, AI tools and changes. Keep private data/permission evidence out of public GitHub. Do not open untrusted joblib files.
