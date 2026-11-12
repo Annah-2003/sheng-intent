@@ -1,98 +1,71 @@
-# Rada — requests in the words we use
+# Rada — Team 20
 
-**Team 20 · Track A · Written Kiswahili and Sheng**
+**Track A · Written Kiswahili and Sheng**
 
 Kathy Auma · Irene Gitau · Hafswa Sufi
 
-## Why we built it
+## The idea
 
-People should be able to approach useful digital tools in language they are comfortable using. Requiring a particular English command can turn a simple task into a problem of guessing what the system will accept. Our longer-term motivation is to make the benefits of assistant technology more approachable, so language is less of a barrier to participation and opportunity.
+People should be able to approach useful digital tools in the language they use. We wanted to see whether a small model could recognise everyday requests written in Kiswahili and Sheng, including mixed wording such as “Nichezee doba”.
 
-We started with a smaller, testable question: **can a lightweight model identify an everyday request when a person writes it in their own Kiswahili/Sheng wording?** Recognising the request is one step towards an assistant that could act on it. Rada currently classifies ten request types; it does not execute actions.
+Rada identifies ten request types, including music, weather, alarms, calendars and lists. This is an assessment prototype. It shows a predicted category and a simulated response; it does not perform real actions.
 
-Our evidence comes from scenario-based text collection, not an access survey or a community-wide usability study. The responses showed the practical challenge: code-switching, spelling variation, and short phrases that sometimes depend on context. We have not measured improved access, saved time or the needs of all Sheng speakers. [Design rationale and evidence limits](docs/HCI_DESIGN.md).
+## Watch or try
 
-## What we contributed
+- [Presentation and demo video folder](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=drive_link)
+- [Live prototype](https://sheng-intent-3nkn9auhiujhbpwvvwirby.streamlit.app/)
 
-- Collected and retained **324 human-authored contributions**, with source and review decisions traced privately.
-- Compared our-data-only training with two bounded additions of upstream Kiswahili data on the same development set.
-- Built a model-connected assessment demo with plain request names, labelled simulated responses and visible uncertainty.
-- Preserved real failures and ambiguous labels rather than presenting an always-correct assistant.
+## What we did
 
-The ten labels and baseline approach come from the organiser kit. MASSIVE supplies external training examples. Those reused materials are credited separately; external examples do not count as our contributions.
+1. Asked people what they would say to an assistant in everyday situations.
+2. Reviewed their wording and labels; kept **324 human-written examples**.
+3. Used **213 for training, 55 for development and 56 for the final test**. Related scenario groups stayed together.
+4. Compared our data alone with adding 200 or 500 Kiswahili training examples from MASSIVE.
+5. Selected the best development version, froze it and ran the final test once.
 
-## Try or watch
+The organiser kit supplied the ten labels and starting model. We contributed the collected data, review work, experiment and demonstration. MASSIVE examples are counted separately.
 
-- **Website:** https://sheng-intent-3nkn9auhiujhbpwvvwirby.streamlit.app/
-- **Presentation/demo video:** VIDEO_LINK_TO_ADD — recorded; viewable link still required before submission.
+## Results and limits
 
-This is an assessment prototype for judges and the team to inspect the classifier, not a deployed assistant service. Type a request, click **What am I asking?**, and read the predicted request type. The simulated response shows what an assistant might ask or do next. No music, alarm, calendar or external action is executed. The interface is restored to the version used for the team's recorded demonstration.
+**Final test: 43/56 correct — 76.8% accuracy, macro-F1 0.764.** Macro-F1 gives each category equal importance. Always guessing the most common training category gave 8.9% accuracy.
 
-## Data and review
+On development data, adding 500 MASSIVE examples increased correct predictions from 42/55 to 44/55. This is not a measured final-test improvement over the team-only model.
 
-We elicited responses through five batches of ten everyday scenarios. The original 44 submissions produced 386 nonblank answers. A later export has 45 submissions and 395 answers; nine later answers were not imported as reviewed contributions. After documented exclusions, holds, two follow-up review decisions and one consented human addition, the frozen contribution contains **324 records**.
+The sample is small. Some labels are debatable, some requests need context, and the same respondent can appear in different splits. Rada also forces unsupported requests into a known category. We have not measured real-world usability or improved access. [Results and five errors](docs/RESULTS.md).
 
-| Split | Records | Purpose |
-| --- | ---: | --- |
-| Training | 213 | Fit the model |
-| Development | 55 | Compare the three fixed conditions |
-| Final test | 56 | Evaluate the selected frozen model once |
+## Run it
 
-Every intent meets 15 training / 5 development / 5 test examples. Scenario families stay together. Different answers by a respondent may cross splits, so this is not unseen-speaker testing. Punctuation-only duplicates are checked; semantic independence across scenarios is not fully established.
-
-Kathy's review was imported using original row/scenario references. Reviewer independence and competence are recorded from human confirmations. Follow-up decisions are attributed to Hafswa, not retroactively to Kathy. Read [annotation guide](docs/ANNOTATION_GUIDE.md), [dataset card](docs/DATASET_CARD.md) and [quality report](docs/QUALITY_REPORT.md).
-
-**Data access:** public redistribution is not confirmed. The public ZIP excludes response data and per-example predictions. The separate **Team20_Assessment_Private.zip** contains the contribution, source/review evidence and reconstruction inputs for the permitted restricted assessment route. Its accessible location and organiser access instructions must be added to [the access note](docs/DATA_ACCESS.md) before hand-in. Do not upload that private ZIP to the public repository.
-
-## Results
-
-The selected model was trained on 213 team examples plus 500 MASSIVE sw-KE training examples. It scored **43/56 correct (76.8% accuracy), macro-F1 0.764** on the final test. A majority-class comparator scored 8.9% accuracy. Each test category contains only 5–7 examples.
-
-| Training condition | Correct on development | Macro-F1 |
-| --- | ---: | ---: |
-| Team data only | 42/55 | 0.715 |
-| Team data + 200 MASSIVE examples | 43/55 | 0.763 |
-| Team data + 500 MASSIVE examples | 44/55 | 0.785 |
-
-This supports a development improvement, not a measured final-test gain over the team-only model. Final per-intent results, confusion matrix and majority comparison are in [reports/test.json](reports/test.json). [Results and error analysis](docs/RESULTS.md) explain the limitations, including weather/calendar confusion and debatable reviewed labels. No labels, splits or model settings were changed after viewing final-test outcomes.
-
-## Run the project
-
-Python 3.12 was used. From the project root:
+Use Python 3.12 from the project folder:
 
 ```bash
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
-python -m unittest discover -s tests -p test_public_app.py
-python scripts/check_submission.py
 ```
 
-The saved models and aggregate reports are included. No API key or training is needed to use the demo. The app checks hashes to connect the displayed results to the selected model. The submission checker reports missing links; use --strict when making the final hand-in. See [reproduction instructions](docs/REPRODUCIBILITY.md) for validation, reconstruction, commands and private inputs. The completed experiment intentionally refuses overwriting its freeze. Dependencies: requirements.txt and requirements-lock.txt.
+The saved model is included; no API key or retraining is needed. [Validation, training, evaluation and test commands](docs/REPRODUCIBILITY.md).
 
-## Team contributions and assistance
+## Required files
 
-Kathy supplied human review and collection/review documentation. Hafswa coordinated data preparation, follow-up decisions, model experiments, interface and repository work with substantial AI assistance. A further annotation guide was pushed through GitHub account Annah-2003 and has been reconciled with the frozen experiment. Irene's final combined-documentation and checking work needs member confirmation. All three participated in the recorded presentation, according to the team's update. [Contribution and AI-use statement](docs/TEAM.md).
-
-## Submission materials
-
-| Required item | File or access route |
+| Material | Where to find it |
 | --- | --- |
-| Contribution dataset and splits | Private assessment ZIP: data/contribution.csv; hash and access note in docs/DATA_ACCESS.md |
-| Annotation guide | docs/ANNOTATION_GUIDE.md |
-| Source log and terms | docs/SOURCE_LOG.csv; docs/licenses/; assets/PHOTO_CREDIT.md |
-| Dataset card | docs/DATASET_CARD.md |
-| Quality and review evidence | docs/QUALITY_REPORT.md; private assessment data/review/ |
-| Contribution and AI disclosure | docs/TEAM.md |
-| Actual evaluation | docs/RESULTS.md; reports/development.json; reports/test.json |
-| Runnable code and environment | app.py; src/; notebooks/; requirements.txt |
-| Trained artifacts | models/; frozen hashes in models/freeze.json |
-| Video | VIDEO_LINK_TO_ADD |
-| Original team repository and version | https://github.com/Annah-2003/sheng-intent — exact package source SHA is in SUBMISSION_MANIFEST.json |
+| Contribution data, splits and review evidence | [Restricted access instructions](docs/DATA_ACCESS.md) |
+| Annotation rules | [Annotation guide](docs/ANNOTATION_GUIDE.md) |
+| Sources and permissions | [Source log](docs/SOURCE_LOG.csv) and docs/licenses/ |
+| Dataset summary | [Dataset card](docs/DATASET_CARD.md) |
+| Cleaning and review checks | [Quality report](docs/QUALITY_REPORT.md) |
+| Team contributions and AI use | [Team statement](docs/TEAM.md) |
+| Results and confusion matrix | [Results](docs/RESULTS.md), reports/test.json and reports/confusion_matrix.csv |
+| Model and code | models/, src/, notebooks/ and app.py |
+| Design explanation | [Human-centred approach](docs/HCI_DESIGN.md) |
 
-## Final hand-in
+## Team and credits
 
-Extended deadline: **12 November 2026, 23:59 EAT**. Copy the public project into **teams/team-20/** in a fork of https://github.com/OmondiKevin/sces-nlp-hub-datathon-2026. Change only that folder and open one normal PR titled **Team 20 | Final submission**. The open PR URL is the receipt. A website or original-repository link alone is not submission. See docs/SUBMISSION.md.
+Kathy handled review and collection documentation. Hafswa coordinated preparation, modelling and the interface with AI assistance. Irene coordinates the combined documentation; final completed tasks need team confirmation. The [team statement](docs/TEAM.md) records assistance and work to confirm.
 
-## Rights and attribution
+Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). Permission for public release of respondent data is not confirmed, so assessment data stays separate from public code.
 
-Organiser helpers retain MIT notices in src/starter/ and LICENSE_CODE.txt. MASSIVE retains CC BY 4.0. The contextual photograph retains CC BY-SA 4.0; it does not depict our respondents or imply their endorsement. Team response data is restricted to confirmed academic/assessment use, with public release unconfirmed. No blanket open-data or original-code licence is asserted for material the team has not cleared. Full terms are in the source log.
+**Original team repository:** https://github.com/Annah-2003/sheng-intent
+
+**Exact source version:** full commit SHA in the packaged SUBMISSION_MANIFEST.json and source-version note below.
+
+Submit the browsable project under teams/team-20/ through one open PR before **12 November 2026, 23:59 EAT**. [Final checklist](docs/SUBMISSION.md).

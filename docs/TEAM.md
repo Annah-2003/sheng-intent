@@ -1,13 +1,13 @@
-# Team contributions and AI assistance
+# Team contributions and AI use
 
-| Member | Work supported by current evidence | Final confirmation |
-| --- | --- | --- |
-| Kathy Auma | Supplied the reviewed workbook and collection/review report; shared response CSV snapshots through the fork; confirmed as fluent independent reviewer through the user | Confirm actual review dates and missing reasons; verify consent wording evidence |
-| Hafswa Sufi | Coordinated data preparation, follow-up decisions, model comparisons, frozen evaluation, interface, repository organisation and submission packaging with AI assistance | Review the final package, provide video URL and arrange restricted artifact access |
-| Irene Gitau | Named documentation coordinator; the user says the combined team presentation has been recorded. An annotation guide was pushed through Annah-2003, but that account's identity is not assumed here | Confirm her actual completed documentation/checking contribution and ownership of the guide if applicable |
+| Member | Contribution |
+| --- | --- |
+| Kathy Auma | Human review, response files and collection/review documentation |
+| Hafswa Sufi | Data preparation, follow-up review decisions, model experiments, interface and repository work with AI assistance |
+| Irene Gitau | Combined-documentation coordination; confirm the final tasks completed |
 
-The user confirmed the team has recorded its presentation. The video link has not yet been supplied, so its contents and access have not been verified here. Each member should confirm these statements before submission; planned work is not presented as completed evidence.
+The team has recorded its [presentation/demo](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=drive_link). Each member should check the contribution statement before submission.
 
-Codex assisted with code, imports, mechanical review checks, model training/evaluation workflow, tests, notebook, interface, organisation, documentation drafts and package checks. Human language/label judgements came from the supplied review and explicit follow-up decisions. No AI-authored utterances were counted as human contributions. Examples proposed for interface/guidance use are separate from the contribution dataset. Earlier Claude planning assistance should also be disclosed to the extent used by the team.
+Codex assisted with code, mechanical checks, training/evaluation workflow, tests, interface, organisation and documentation. Claude helped with earlier planning. Human language and label decisions are recorded separately. No AI-written responses were counted as human contributions.
 
-The organiser's baseline, taxonomy and unchanged helpers are reused and credited. MASSIVE rows retain upstream provenance and labels and are counted separately. Neither the baseline algorithm nor this documentation is claimed as independent human language review. Team members remain responsible for checking the generated code, claims, results and rights evidence.
+The taxonomy and starting model came from the organiser kit. MASSIVE examples retain their upstream labels and are counted separately. Source credits and licences are in SOURCE_LOG.csv.

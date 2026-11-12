@@ -1,13 +1,11 @@
-# Restricted assessment data access
+# Assessment data access
 
-Public dataset redistribution is not confirmed. Do not upload the private assessment ZIP to GitHub.
+The response data is permitted for private academic assessment. Public release is not confirmed, so do not upload the private ZIP to GitHub.
 
-- Package: **Team20_Assessment_Private.zip** (created alongside the public ZIP).
-- Required permitted data: data/contribution.csv, with train/dev/test already assigned in its split column.
-- Contribution SHA-256: `6c78f6b0881ce0fe497a75148982bc50a945e7596639af84b43c41b3ace8c697`.
-- Rows: 324, comprising 213 train / 55 dev / 56 test.
-- Contents: frozen contribution, original raw/review evidence, decisions, permission record, external training pool, private prediction files and reconstruction instructions.
-- Delivery URL or agreed organiser channel: **ASSESSMENT_ACCESS_TO_ADD**.
-- Access steps and recipients: **TEAM_TO_COMPLETE** before hand-in. Verify the judges can obtain the permitted files without a last-minute access request.
+- File: **Team20_Assessment_Private.zip**.
+- Dataset: data/contribution.csv — 324 rows, already split 213/55/56.
+- Also included: original response/review files, decisions, permission record, external training inputs and per-example predictions.
+- Delivery link or agreed organiser channel: **ASSESSMENT_ACCESS_TO_ADD**.
+- Retrieval steps for judges: **TEAM_TO_COMPLETE**.
 
-The private ZIP overlays the public project at the same project-root level to enable the private tests and reconstruction. It includes assessment evidence that must remain restricted. A hash proves which file was supplied; it does not establish permission. Follow the organiser's agreed private evidence route.
+Extract both ZIPs into the same parent folder. Their teams/team-20/ contents will align. Keep the combined copy private. Exact dataset/model hashes are in the manifests; running instructions are in REPRODUCIBILITY.md.
